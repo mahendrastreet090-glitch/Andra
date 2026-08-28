@@ -1495,6 +1495,169 @@
         transform: translateX(0);
     }
 
+
+    /* --- ORDER BUTTON PER PRICE --- */
+    .price-row-item.orderable {
+        cursor: default;
+        transition: var(--transition);
+    }
+    .price-row-item.orderable:hover {
+        border-color: rgba(0,240,255,.22);
+        background: rgba(255,255,255,.025);
+    }
+    .price-row-main {
+        flex: 1;
+        min-width: 0;
+    }
+    .price-row-order {
+        flex: 0 0 auto;
+        border: 0;
+        border-radius: 9px;
+        padding: 7px 12px;
+        font-family: inherit;
+        font-size: .74rem;
+        font-weight: 700;
+        color: #fff;
+        background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple));
+        box-shadow: 0 0 12px rgba(0,240,255,.18);
+        cursor: pointer;
+        transition: var(--transition);
+        white-space: nowrap;
+    }
+    .price-row-order:hover { transform: translateY(-1px) scale(1.03); box-shadow: 0 0 18px rgba(0,240,255,.35); }
+    .price-row-order i { margin-right: 4px; }
+
+    /* --- PAYMENT MODAL --- */
+    #paymentModal {
+        position: fixed;
+        inset: 0;
+        z-index: 10000;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        background: rgba(0,0,0,.72);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+    #paymentModal.show { display: flex; animation: paymentFade .2s ease; }
+    @keyframes paymentFade { from { opacity:0; } to { opacity:1; } }
+    .payment-modal-card {
+        width: 100%;
+        max-width: 470px;
+        max-height: 90vh;
+        overflow-y: auto;
+        padding: 24px;
+        border: 1px solid rgba(0,240,255,.25);
+        border-radius: 20px;
+        background: var(--surface-dark);
+        box-shadow: 0 20px 70px rgba(0,0,0,.55), 0 0 35px rgba(0,240,255,.08);
+        position: relative;
+    }
+    .payment-close {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        border: 1px solid var(--border-glass);
+        background: rgba(255,255,255,.04);
+        color: var(--text-main);
+        cursor: pointer;
+        font-size: 1rem;
+    }
+    .payment-title { font-size: 1.35rem; font-weight: 800; margin-bottom: 6px; padding-right: 40px; }
+    .payment-subtitle { color: var(--text-muted); font-size: .82rem; line-height: 1.55; margin-bottom: 16px; }
+    .payment-order-summary {
+        padding: 12px 14px;
+        border-radius: 12px;
+        background: rgba(0,240,255,.055);
+        border: 1px solid rgba(0,240,255,.12);
+        margin-bottom: 16px;
+        font-size: .83rem;
+    }
+    .payment-order-summary strong { color: var(--neon-blue); }
+    .payment-methods { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .payment-method-btn {
+        min-height: 52px;
+        border: 1px solid var(--border-glass);
+        border-radius: 12px;
+        background: rgba(255,255,255,.035);
+        color: var(--text-main);
+        font-family: inherit;
+        font-weight: 700;
+        cursor: pointer;
+        transition: var(--transition);
+    }
+    .payment-method-btn:hover, .payment-method-btn.active {
+        border-color: var(--neon-blue);
+        background: rgba(0,240,255,.08);
+        box-shadow: 0 0 15px rgba(0,240,255,.13);
+        transform: translateY(-1px);
+    }
+    .payment-detail {
+        display: none;
+        margin-top: 16px;
+        padding: 16px;
+        border-radius: 14px;
+        background: rgba(255,255,255,.035);
+        border: 1px solid var(--border-glass);
+    }
+    .payment-detail.show { display: block; animation: paymentFade .2s ease; }
+    .payment-detail h4 { font-size: 1rem; margin-bottom: 7px; }
+    .payment-number {
+        font-size: 1.15rem;
+        font-weight: 800;
+        letter-spacing: .5px;
+        color: var(--neon-blue);
+        word-break: break-all;
+        margin-bottom: 7px;
+    }
+    .payment-note { color: var(--text-muted); font-size: .76rem; line-height: 1.55; }
+    .payment-qris {
+        width: 100%;
+        max-width: 280px;
+        display: block;
+        margin: 10px auto 12px;
+        border-radius: 12px;
+        border: 1px solid var(--border-glass);
+        background: #fff;
+    }
+    .payment-proof-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        margin-top: 14px;
+        padding: 12px 15px;
+        border-radius: 12px;
+        color: #fff;
+        background: linear-gradient(135deg, #25D366, #128C7E);
+        text-decoration: none;
+        font-weight: 700;
+        font-size: .86rem;
+        box-shadow: 0 0 18px rgba(37,211,102,.2);
+    }
+    .payment-proof-btn:hover { transform: translateY(-1px); box-shadow: 0 0 24px rgba(37,211,102,.35); }
+    .payment-warning {
+        margin-top: 12px;
+        padding: 10px 12px;
+        border-radius: 10px;
+        background: rgba(255,170,0,.07);
+        border: 1px solid rgba(255,170,0,.15);
+        color: #ffc866;
+        font-size: .74rem;
+        line-height: 1.5;
+    }
+    @media (max-width: 500px) {
+        .price-row-item.orderable { padding: 11px 10px; }
+        .price-row-order { padding: 6px 9px; font-size: .68rem; }
+        .payment-modal-card { padding: 20px 16px; }
+        .payment-methods { gap: 8px; }
+    }
+
     /* --- RESPONSIVE DESIGN --- */
     @media (max-width: 992px) {
         .hero-grid {
@@ -2505,6 +2668,24 @@
 
 </div>
 
+
+<!-- PAYMENT / ORDER MODAL -->
+<div id="paymentModal" aria-hidden="true">
+    <div class="payment-modal-card" role="dialog" aria-modal="true" aria-labelledby="paymentModalTitle">
+        <button class="payment-close" id="paymentClose" aria-label="Tutup"><i class="fas fa-times"></i></button>
+        <h3 class="payment-title" id="paymentModalTitle">Pilih Metode Pembayaran</h3>
+        <p class="payment-subtitle">Silakan pilih metode pembayaran. Setelah transfer, kirim bukti pembayaran ke Owner melalui WhatsApp.</p>
+        <div class="payment-order-summary" id="paymentOrderSummary"></div>
+        <div class="payment-methods">
+            <button class="payment-method-btn" data-method="DANA">💙 DANA</button>
+            <button class="payment-method-btn" data-method="GOPAY">🟢 GOPAY</button>
+            <button class="payment-method-btn" data-method="SEABANK">🏦 SEABANK</button>
+            <button class="payment-method-btn" data-method="QRIS">▣ QRIS</button>
+        </div>
+        <div class="payment-detail" id="paymentDetail"></div>
+    </div>
+</div>
+
 <!-- JAVASCRIPT LOGIC -->
 <script>
 
@@ -3093,8 +3274,156 @@
     });
 
 
+
     /* =========================================================
-       13. BACKGROUND MUSIC
+       13. ORDER PER HARGA + PAYMENT FLOW
+    ========================================================= */
+    const paymentModal = document.getElementById('paymentModal');
+    const paymentClose = document.getElementById('paymentClose');
+    const paymentSummary = document.getElementById('paymentOrderSummary');
+    const paymentDetail = document.getElementById('paymentDetail');
+    const paymentMethodButtons = document.querySelectorAll('.payment-method-btn');
+
+    const PAYMENT_DATA = {
+        DANA: { label: 'DANA', number: '089510006505' },
+        GOPAY: { label: 'GOPAY', number: '089510006505' },
+        SEABANK: { label: 'SEABANK', number: '901383287683' },
+        QRIS: { label: 'QRIS', image: 'assets/qris.jpg' }
+    };
+
+    let selectedOrder = null;
+
+    function cleanPrice(text) {
+        return text.trim().replace(/\s+/g, ' ');
+    }
+
+    function serviceNameFromDropdown(dropdown) {
+        const map = {
+            'dropdown-reguler': 'Sewa Bot Reguler',
+            'dropdown-vip': 'Sewa Bot VIP',
+            'dropdown-ig': 'Followers Instagram',
+            'dropdown-wa': 'Layanan WhatsApp'
+        };
+        return map[dropdown] || 'Layanan Digital';
+    }
+
+    function getOrderMessage(order) {
+        if (order.service.includes('Reguler')) {
+            return `Hallo kak aku mau sewa bot ${order.duration.toLowerCase()} ${order.bonus ? `bonus ${order.bonus.toLowerCase()}` : ''} dan ini bukti pembayaran nya`;
+        }
+        if (order.service.includes('VIP')) {
+            return `Hallo kak aku mau sewa bot VIP ${order.duration.toLowerCase()} ${order.bonus ? `dengan ${order.bonus.toLowerCase()}` : ''} dan ini bukti pembayaran nya`;
+        }
+        if (order.service.includes('Followers Instagram')) {
+            return `Hallo kak aku mau order ${order.duration} Followers Instagram seharga ${order.price} dan ini bukti pembayaran nya`;
+        }
+        if (order.service.includes('WhatsApp')) {
+            return `Hallo kak aku mau order ${order.duration} ${order.type || 'Followers/Reaction'} WhatsApp seharga ${order.price} dan ini bukti pembayaran nya`;
+        }
+        return `Hallo kak aku mau order ${order.service} ${order.duration} seharga ${order.price} dan ini bukti pembayaran nya`;
+    }
+
+    function openPaymentModal(order) {
+        selectedOrder = order;
+        paymentSummary.innerHTML = `<strong>${order.service}</strong><br>${order.duration} — <strong>${order.price}</strong>${order.bonus ? `<br><span style="color:var(--text-muted)">${order.bonus}</span>` : ''}`;
+        paymentDetail.classList.remove('show');
+        paymentDetail.innerHTML = '';
+        paymentMethodButtons.forEach(btn => btn.classList.remove('active'));
+        paymentModal.classList.add('show');
+        paymentModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closePaymentModal() {
+        paymentModal.classList.remove('show');
+        paymentModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        selectedOrder = null;
+    }
+
+    function showPaymentMethod(method) {
+        if (!selectedOrder) return;
+        const data = PAYMENT_DATA[method];
+        if (!data) return;
+        paymentMethodButtons.forEach(btn => btn.classList.toggle('active', btn.dataset.method === method));
+
+        const message = encodeURIComponent(getOrderMessage(selectedOrder));
+        const waUrl = `https://wa.me/6289510006505?text=${message}`;
+
+        if (method === 'QRIS') {
+            paymentDetail.innerHTML = `
+                <h4>▣ Pembayaran via QRIS</h4>
+                <img src="${data.image}" class="payment-qris" alt="QRIS Pembayaran" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="payment-note" style="display:none;text-align:center;color:#ff9f9f;">Foto QRIS belum ditemukan. Pastikan file <b>assets/qris.jpg</b> sudah diupload.</div>
+                <div class="payment-note">Scan QRIS di atas sesuai nominal pesanan. Setelah transfer berhasil, wajib kirim bukti pembayaran.</div>
+                <div class="payment-warning">⚠️ Pastikan nominal pembayaran sesuai pesanan sebelum melakukan transfer.</div>
+                <a href="${waUrl}" target="_blank" rel="noopener" class="payment-proof-btn"><i class="fab fa-whatsapp"></i> Kirim Bukti Pembayaran</a>
+            `;
+        } else {
+            paymentDetail.innerHTML = `
+                <h4>Pembayaran via ${data.label}</h4>
+                <div class="payment-number">${data.number}</div>
+                <div class="payment-note">Silakan transfer sesuai nominal <b>${selectedOrder.price}</b> ke rekening/nomor di atas.</div>
+                <div class="payment-warning">⚠️ ${method === 'DANA' ? 'Pastikan transfer ke nomor DANA yang benar.' : method === 'GOPAY' ? 'Pastikan transfer ke nomor GoPay yang benar.' : 'Pastikan transfer ke rekening SeaBank yang benar.'}</div>
+                <a href="${waUrl}" target="_blank" rel="noopener" class="payment-proof-btn"><i class="fab fa-whatsapp"></i> Kirim Bukti Pembayaran</a>
+            `;
+        }
+        paymentDetail.classList.add('show');
+    }
+
+    paymentMethodButtons.forEach(btn => {
+        btn.addEventListener('click', () => showPaymentMethod(btn.dataset.method));
+    });
+    paymentClose.addEventListener('click', closePaymentModal);
+    paymentModal.addEventListener('click', e => { if (e.target === paymentModal) closePaymentModal(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && paymentModal.classList.contains('show')) closePaymentModal(); });
+
+    document.querySelectorAll('.price-row-item').forEach(row => {
+        const topMeta = row.querySelector('.row-top-meta');
+        const durationEl = row.querySelector('.row-duration');
+        const costEl = row.querySelector('.row-cost');
+        if (!topMeta || !durationEl || !costEl) return;
+
+        const dropdown = row.closest('.tier-price-dropdown');
+        const dropdownId = dropdown ? dropdown.id : '';
+        const duration = cleanPrice(Array.from(durationEl.childNodes).filter(node => node.nodeType === Node.TEXT_NODE).map(node => node.textContent).join(' '));
+        const price = cleanPrice(costEl.textContent);
+        const bonusEl = row.querySelector('.row-bonus');
+        const bonus = bonusEl ? cleanPrice(bonusEl.textContent) : '';
+        const service = serviceNameFromDropdown(dropdownId);
+        let type = '';
+        if (dropdownId === 'dropdown-wa') {
+            const wrapper = row.closest('.price-list-wrapper');
+            const reactionHeading = wrapper ? Array.from(wrapper.querySelectorAll('h4')).find(h => h.textContent.toLowerCase().includes('reaction')) : null;
+            const reactionComesBeforeRow = reactionHeading && (reactionHeading.compareDocumentPosition(row) & Node.DOCUMENT_POSITION_FOLLOWING);
+            type = reactionComesBeforeRow ? 'Reaction' : 'Followers';
+        }
+
+        row.classList.add('orderable');
+        let main = row.querySelector('.price-row-main');
+        if (!main) {
+            main = document.createElement('div');
+            main.className = 'price-row-main';
+            while (row.firstChild) main.appendChild(row.firstChild);
+            row.appendChild(main);
+        }
+
+        const orderBtn = document.createElement('button');
+        orderBtn.type = 'button';
+        orderBtn.className = 'price-row-order';
+        orderBtn.innerHTML = '<i class="fas fa-shopping-cart"></i> Order';
+        orderBtn.setAttribute('aria-label', `Order ${service} ${duration}`);
+        orderBtn.addEventListener('click', e => {
+            e.preventDefault();
+            e.stopPropagation();
+            openPaymentModal({ service, duration, price, bonus, type });
+        });
+        row.appendChild(orderBtn);
+    });
+
+
+    /* =========================================================
+       14. BACKGROUND MUSIC
 
        DEFAULT STATUS = ON
 
