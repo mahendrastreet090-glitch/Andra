@@ -4,10 +4,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="description" content="Layanan WhatsApp Bot Premium dengan performa tinggi, fitur lengkap, server stabil, dan sistem otomatis untuk kebutuhan pribadi maupun bisnis Anda.">
   <meta name="keywords" content="WhatsApp Bot, Bot WA Premium, Sewa Bot WA, Suntik Followers, Followers Instagram, Followers TikTok, Reaction Saluran, King Queen Bot">
-  <meta name="author" content="KING & QUEEN BOT">  <!-- Open Graph -->  <meta property="og:title" content="KING & QUEEN BOT ✔ - Ndraa official">
+  <meta name="author" content="KING & QUEEN BOT">  <!-- Open Graph -->  <meta property="og:title" content="KING & QUEEN BOT - Ndraa official">
   <meta property="og:description" content="Platform WhatsApp Bot premium & Layanan Digital otomatis 24 Jam Nonstop dengan performa tinggi dan aman.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/KING AND QUEEN.jpg">  <!-- Preload Gambar -->  <link rel="preload" href="assets/KING AND QUEEN.jpg" as="image">  <title>KING & QUEEN ✔ - Ndraa official</title>  <!-- Google Fonts & Font Awesome Icons -->  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta property="og:image" content="assets/KING AND QUEEN.jpg">  <!-- Preload Gambar -->  <link rel="preload" href="assets/KING AND QUEEN.jpg" as="image">  <title>KING & QUEEN - Ndraa official</title>  <!-- Google Fonts & Font Awesome Icons -->  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">  <style>
@@ -282,66 +282,17 @@
         transform: scale(1.03);
     }
 
-    /* --- WHATSAPP-STYLE VERIFIED BADGE --- */
-    .verified-check {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        width: 20px;
-        height: 20px;
-        min-width: 20px;
-        margin-left: 6px;
-        vertical-align: -4px;
+    /* --- VERIFIED IMAGE (NAVBAR ONLY) --- */
+    .verified-image {
+        width: 19px;
+        height: 19px;
+        margin-left: 5px;
+        vertical-align: middle;
+        display: inline-block;
+        object-fit: contain;
+        border: 0;
         border-radius: 50%;
-        background: transparent;
-        box-shadow: 0 1px 2px rgba(0,0,0,.22), 0 0 7px rgba(29,155,240,.28);
-        font-size: 0;
-        line-height: 0;
-        -webkit-text-fill-color: initial;
-        isolation: isolate;
-    }
-
-    /* subtle WhatsApp/Meta-like badge contour */
-    .verified-check::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        border-radius: 50%;
-        background: #1d9bf0;
-        clip-path: polygon(50% 0%, 62% 3%, 72% 1%, 81% 8%, 91% 11%, 94% 22%, 100% 30%, 96% 41%, 99% 51%, 95% 62%, 97% 73%, 89% 81%, 85% 92%, 74% 94%, 63% 100%, 52% 96%, 40% 100%, 31% 94%, 20% 94%, 14% 84%, 5% 78%, 6% 66%, 0% 57%, 4% 46%, 1% 35%, 8% 26%, 8% 15%, 19% 12%, 28% 5%, 39% 5%);
-        z-index: 0;
-    }
-
-    .verified-check::after {
-        content: "";
-        display: block;
-        width: 6px;
-        height: 10px;
-        margin-top: -2px;
-        border-right: 2.4px solid #fff;
-        border-bottom: 2.4px solid #fff;
-        transform: rotate(45deg) skew(-4deg);
-        transform-origin: center;
-        filter: drop-shadow(0 0 0.5px rgba(255,255,255,.9));
-        position: relative;
-        z-index: 1;
-    }
-
-    .footer-copy .verified-check {
-        width: 15px;
-        height: 15px;
-        min-width: 15px;
-        margin-left: 3px;
-        vertical-align: -3px;
-        box-shadow: 0 1px 2px rgba(0,0,0,.18);
-    }
-
-    .footer-copy .verified-check::after {
-        width: 4px;
-        height: 7px;
-        border-width: 1.8px;
-        margin-top: -1px;
+        transform: translateY(-1px);
     }
 
     /* --- FADE UP SCROLL ANIMATION --- */
@@ -960,6 +911,14 @@
         border-color: #25D366 !important;
         background: rgba(37, 211, 102, 0.1) !important;
         box-shadow: 0 0 15px rgba(37, 211, 102, 0.3) !important;
+        color: var(--text-main);
+    }
+
+    .select-tier-box.wa-reaction-trigger:hover,
+    .select-tier-box.wa-reaction-trigger.active {
+        border-color: #ffcc00 !important;
+        background: rgba(255, 204, 0, 0.1) !important;
+        box-shadow: 0 0 15px rgba(255, 204, 0, 0.3) !important;
         color: var(--text-main);
     }
 
@@ -1606,13 +1565,63 @@
     }
     .payment-detail.show { display: block; animation: paymentFade .2s ease; }
     .payment-detail h4 { font-size: 1rem; margin-bottom: 7px; }
+    .payment-number-wrap {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 7px;
+    }
     .payment-number {
+        flex: 1;
+        min-width: 0;
         font-size: 1.15rem;
         font-weight: 800;
         letter-spacing: .5px;
         color: var(--neon-blue);
         word-break: break-all;
-        margin-bottom: 7px;
+    }
+    .payment-copy-btn,
+    .payment-download-btn {
+        flex: 0 0 auto;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        min-height: 38px;
+        padding: 8px 11px;
+        border: 1px solid rgba(0,240,255,.25);
+        border-radius: 9px;
+        color: var(--neon-blue);
+        background: rgba(0,240,255,.07);
+        font-family: inherit;
+        font-size: .72rem;
+        font-weight: 700;
+        text-decoration: none;
+        cursor: pointer;
+        transition: var(--transition);
+        white-space: nowrap;
+    }
+    .payment-copy-btn:hover,
+    .payment-download-btn:hover {
+        transform: translateY(-1px);
+        border-color: var(--neon-blue);
+        background: rgba(0,240,255,.13);
+        box-shadow: 0 0 15px rgba(0,240,255,.2);
+    }
+    .payment-copy-btn.copied {
+        color: #7dffad;
+        border-color: rgba(37,211,102,.45);
+        background: rgba(37,211,102,.09);
+    }
+    .payment-qris-actions {
+        display: flex;
+        justify-content: center;
+        margin: 4px 0 12px;
+    }
+    .payment-download-btn {
+        color: #fff;
+        border-color: rgba(0,240,255,.3);
+        background: linear-gradient(135deg, rgba(0,240,255,.16), rgba(173,0,255,.16));
     }
     .payment-note { color: var(--text-muted); font-size: .76rem; line-height: 1.55; }
     .payment-qris {
@@ -1815,10 +1824,12 @@
             width: 100%;
         }
     }
-  </style></head><body><!-- Loading Screen -->
+  
+
+</style></head><body><!-- Loading Screen -->
 <div id="loader">
     <div class="spinner"></div>
-    <div class="loader-text" id="loader-label">KING & QUEEN BOT ✔</div>
+    <div class="loader-text" id="loader-label">KING & QUEEN BOT</div>
 </div>
 
 <!-- Mouse Glow effect -->
@@ -1842,7 +1853,7 @@
 
             <a href="#" class="logo">
                 KING & QUEEN
-                <span class="verified-check" title="Verified"></span>
+                <img src="assets/verified.jpg" alt="Verified" class="verified-image">
             </a>
 
             <div class="nav-right">
@@ -1888,7 +1899,6 @@
                     Welcome to <br>
                     <span>
                         KING & QUEEN BOT
-                        <span class="verified-check" title="Verified"></span>
                     </span>
                 </h1>
 
@@ -1901,7 +1911,7 @@
                 </p>
 
                 <div class="hero-buttons">
-                    <a href="https://wa.me/6289510006505" target="_blank" class="btn btn-primary">
+                    <a href="https://wa.me/628987474815" target="_blank" class="btn btn-primary">
                         <i class="fab fa-whatsapp"></i> Chat Sekarang
                     </a>
 
@@ -1938,13 +1948,12 @@
                         <div class="contact-details">
                             <h3>
                                 Ndra Official
-                                <span class="verified-check" style="width:16px;height:16px;font-size:0.58rem;"></span>
                             </h3>
                             <span class="role-tag role-owner">Owner Utama</span>
                         </div>
                     </div>
 
-                    <a href="https://wa.me/6289510006505" target="_blank" class="btn-wa-contact">
+                    <a href="https://wa.me/628987474815" target="_blank" class="btn-wa-contact">
                         <i class="fab fa-whatsapp"></i> Chat WA
                     </a>
                 </div>
@@ -1976,7 +1985,7 @@
                         </div>
                     </div>
 
-                    <a href="https://wa.me/6282249717551" target="_blank" class="btn-wa-contact">
+                    <a href="https://wa.me/6289509356746" target="_blank" class="btn-wa-contact">
                         <i class="fab fa-whatsapp"></i> Chat WA
                     </a>
                 </div>
@@ -2301,15 +2310,14 @@
                     Siap Bergabung Bersama <br>
                     <span style="background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
                         KING & QUEEN BOT
-                    </span>
-                    <span class="verified-check"></span>?
+                    </span>?
                 </h2>
 
                 <p>
                     Nikmati layanan WhatsApp Bot Premium, sistem otomatis, serta berbagai layanan digital terbaik dalam satu platform yang andal.
                 </p>
 
-                <a href="https://wa.me/6289510006505" target="_blank" class="btn btn-primary">
+                <a href="https://wa.me/628987474815" target="_blank" class="btn btn-primary">
                     <i class="fab fa-whatsapp"></i> CHAT SEKARANG
                 </a>
 
@@ -2322,7 +2330,6 @@
         <div class="container footer-container">
             <div class="footer-copy">
                 &copy; 2026 <strong>KING & QUEEN BOT</strong>
-                <span class="verified-check" style="width:15px;height:15px;font-size:0.52rem;"></span>
                 . By Ndraa official
             </div>
         </div>
@@ -2443,7 +2450,7 @@
 
                         </div>
 
-                        <a href="https://wa.me/6289510006505?text=Halo%20kak%20aku%20mau%20sewa%20yang%20reguler" target="_blank" class="btn btn-primary">
+                        <a href="https://wa.me/628987474815?text=Halo%20kak%20aku%20mau%20sewa%20yang%20reguler" target="_blank" class="btn btn-primary">
                             Sewa Reguler
                         </a>
 
@@ -2520,7 +2527,7 @@
 
                         </div>
 
-                        <a href="https://wa.me/6289510006505?text=Halo%20kak%20aku%20mau%20sewa%20yang%20vip" target="_blank" class="btn btn-primary" style="background: linear-gradient(45deg, var(--neon-purple), #ff007f); box-shadow: 0 0 15px rgba(173,0,255,0.4);">
+                        <a href="https://wa.me/628987474815?text=Halo%20kak%20aku%20mau%20sewa%20yang%20vip" target="_blank" class="btn btn-primary" style="background: linear-gradient(45deg, var(--neon-purple), #ff007f); box-shadow: 0 0 15px rgba(173,0,255,0.4);">
                             Sewa VIP
                         </a>
 
@@ -2563,7 +2570,7 @@
                             • Order = setuju dengan semua ketentuan
                         </div>
 
-                        <a href="https://wa.me/6289510006505?text=Halo%20kak%20aku%20mau%20order%20Followers%20Instagram" target="_blank" class="btn btn-primary" style="background: linear-gradient(45deg, #f09433, #e1306c, #dc2743);">
+                        <a href="https://wa.me/628987474815?text=Halo%20kak%20aku%20mau%20order%20Followers%20Instagram" target="_blank" class="btn btn-primary" style="background: linear-gradient(45deg, #f09433, #e1306c, #dc2743);">
                             Beli Followers IG
                         </a>
 
@@ -2571,12 +2578,17 @@
                 </div>
             </div>
 
-            <!-- WA -->
-            <div class="tier-wrapper-box">
+            <!-- WA FOLLOWERS & REACTION -->
+            <div class="tier-wrapper-box wa-services-wrapper">
 
                 <div class="select-tier-box wa-trigger" id="trigger-wa" style="border-color: rgba(37, 211, 102, 0.3);">
                     <i class="fab fa-whatsapp tier-icon" style="color: #25D366;"></i>
-                    <h3>Suntik WA</h3>
+                    <h3>Followers WhatsApp</h3>
+                </div>
+
+                <div class="select-tier-box wa-reaction-trigger" id="trigger-wa-reaction" style="border-color: rgba(255, 204, 0, 0.3); margin-top: 10px;">
+                    <i class="fas fa-heart tier-icon" style="color: #ffcc00;"></i>
+                    <h3>Reaction WhatsApp</h3>
                 </div>
 
                 <div class="tier-price-dropdown" id="dropdown-wa">
@@ -2586,7 +2598,7 @@
                             📈 Followers Channel WhatsApp
                         </h4>
 
-                        <div class="price-table-list" style="margin-bottom: 15px;">
+                        <div class="price-table-list">
 
                             <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">10 followers</span><span class="row-cost" style="background: rgba(37, 211, 102, 0.15); color: #25D366;">Rp500</span></div></div>
                             <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">20 followers</span><span class="row-cost" style="background: rgba(37, 211, 102, 0.15); color: #25D366;">Rp1.000</span></div></div>
@@ -2602,6 +2614,22 @@
 
                         </div>
 
+                        <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 15px; text-align: left; line-height: 1.4; background: rgba(255,255,255,0.03); padding: 10px; border-radius: 8px;">
+                            <strong>📌 Catatan Penting Ndra Store:</strong><br>
+                            • Order = paham<br>
+                            • No refund, no cancel setelah order masuk<br>
+                            • Proses bisa cepat atau lambat (no rush)<br>
+                            • Kesalahan data dari pembeli bukan tanggung jawab admin<br>
+                            • Refund hanya berlaku jika murni kesalahan admin<br>
+                            • Wajib kirim bukti pembayaran jika ingin diproses
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="tier-price-dropdown" id="dropdown-wa-reaction">
+                    <div class="price-list-wrapper" style="border-color: #ffcc00; box-shadow: 0 0 25px rgba(255, 204, 0, 0.2);">
+
                         <h4 style="font-size: 0.9rem; color: #ffcc00; margin-bottom: 10px; text-align: left;">
                             ❤️ Reaction Channel WhatsApp (😮❤️😂🙏🏻👍🏻)
                         </h4>
@@ -2613,16 +2641,25 @@
                             <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">60 reaction</span><span class="row-cost" style="background: rgba(255, 204, 0, 0.15); color: #ffcc00;">Rp1.500</span></div></div>
                             <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">80 reaction</span><span class="row-cost" style="background: rgba(255, 204, 0, 0.15); color: #ffcc00;">Rp2.000</span></div></div>
                             <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">100 reaction</span><span class="row-cost" style="background: rgba(255, 204, 0, 0.15); color: #ffcc00;">Rp2.500</span></div></div>
-                            <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">150 reaction</span><span class="row-cost" style="background: rgba(255, 204, 0, 0.15); color: #ffcc00;">Rp3.500</span></div></div>
+                            <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">150 reaction</span><span class="row-cost" style="background: rgba(255, 204, 0, 0.15); color: #ffcc00;">Rp3.750</span></div></div>
+                            <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">200 reaction</span><span class="row-cost" style="background: rgba(255, 204, 0, 0.15); color: #ffcc00;">Rp5.000</span></div></div>
+                            <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">300 reaction</span><span class="row-cost" style="background: rgba(255, 204, 0, 0.15); color: #ffcc00;">Rp7.500</span></div></div>
 
                         </div>
 
-                        <a href="https://wa.me/6289510006505?text=Halo%20kak%20aku%20mau%20order%20Suntik%20WhatsApp" target="_blank" class="btn btn-primary" style="background: #25D366; color: #fff; margin-top: 15px;">
-                            Beli Layanan WA
-                        </a>
+                        <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 15px; text-align: left; line-height: 1.4; background: rgba(255,255,255,0.03); padding: 10px; border-radius: 8px;">
+                            <strong>📌 Catatan Penting Ndra Store:</strong><br>
+                            • Order = paham<br>
+                            • No refund, no cancel setelah order masuk<br>
+                            • Proses bisa cepat atau lambat (no rush)<br>
+                            • Kesalahan data dari pembeli bukan tanggung jawab admin<br>
+                            • Refund hanya berlaku jika murni kesalahan admin<br>
+                            • Wajib kirim bukti pembayaran jika ingin diproses
+                        </div>
 
                     </div>
                 </div>
+
             </div>
 
         </div>
@@ -2658,7 +2695,7 @@
     </a>
 
     <a
-        href="https://wa.me/6289510006505"
+        href="https://wa.me/628987474815"
         target="_blank"
         class="floating-btn floating-btn-owner"
         data-label="Chat Owner"
@@ -3214,6 +3251,11 @@
         {
             trigger: 'trigger-wa',
             dropdown: 'dropdown-wa'
+        },
+
+        {
+            trigger: 'trigger-wa-reaction',
+            dropdown: 'dropdown-wa-reaction'
         }
 
     ];
@@ -3302,7 +3344,8 @@
             'dropdown-reguler': 'Sewa Bot Reguler',
             'dropdown-vip': 'Sewa Bot VIP',
             'dropdown-ig': 'Followers Instagram',
-            'dropdown-wa': 'Layanan WhatsApp'
+            'dropdown-wa': 'Followers WhatsApp',
+            'dropdown-wa-reaction': 'Reaction WhatsApp'
         };
         return map[dropdown] || 'Layanan Digital';
     }
@@ -3348,13 +3391,18 @@
         paymentMethodButtons.forEach(btn => btn.classList.toggle('active', btn.dataset.method === method));
 
         const message = encodeURIComponent(getOrderMessage(selectedOrder));
-        const waUrl = `https://wa.me/6289510006505?text=${message}`;
+        const waUrl = `https://wa.me/628987474815?text=${message}`;
 
         if (method === 'QRIS') {
             paymentDetail.innerHTML = `
                 <h4>▣ Pembayaran via QRIS</h4>
-                <img src="${data.image}" class="payment-qris" alt="QRIS Pembayaran" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <img src="${data.image}" class="payment-qris" id="paymentQrisImage" alt="QRIS Pembayaran" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                 <div class="payment-note" style="display:none;text-align:center;color:#ff9f9f;">Foto QRIS belum ditemukan. Pastikan file <b>assets/qris.jpg</b> sudah diupload.</div>
+                <div class="payment-qris-actions">
+                    <a href="${data.image}" download="qris-pembayaran.jpg" class="payment-download-btn">
+                        <i class="fas fa-download"></i> Download QRIS
+                    </a>
+                </div>
                 <div class="payment-note">Scan QRIS di atas sesuai nominal pesanan. Setelah transfer berhasil, wajib kirim bukti pembayaran.</div>
                 <div class="payment-warning">⚠️ Pastikan nominal pembayaran sesuai pesanan sebelum melakukan transfer.</div>
                 <a href="${waUrl}" target="_blank" rel="noopener" class="payment-proof-btn"><i class="fab fa-whatsapp"></i> Kirim Bukti Pembayaran</a>
@@ -3362,13 +3410,48 @@
         } else {
             paymentDetail.innerHTML = `
                 <h4>Pembayaran via ${data.label}</h4>
-                <div class="payment-number">${data.number}</div>
+                <div class="payment-number-wrap">
+                    <div class="payment-number" id="paymentNumber">${data.number}</div>
+                    <button type="button" class="payment-copy-btn" id="copyPaymentNumber" data-number="${data.number}" aria-label="Salin nomor pembayaran" title="Salin nomor pembayaran">
+                        <i class="fas fa-copy"></i> Salin
+                    </button>
+                </div>
                 <div class="payment-note">Silakan transfer sesuai nominal <b>${selectedOrder.price}</b> ke rekening/nomor di atas.</div>
                 <div class="payment-warning">⚠️ ${method === 'DANA' ? 'Pastikan transfer ke nomor DANA yang benar.' : method === 'GOPAY' ? 'Pastikan transfer ke nomor GoPay yang benar.' : 'Pastikan transfer ke rekening SeaBank yang benar.'}</div>
                 <a href="${waUrl}" target="_blank" rel="noopener" class="payment-proof-btn"><i class="fab fa-whatsapp"></i> Kirim Bukti Pembayaran</a>
             `;
         }
         paymentDetail.classList.add('show');
+
+        const copyBtn = document.getElementById('copyPaymentNumber');
+        if (copyBtn) {
+            copyBtn.addEventListener('click', async () => {
+                const number = copyBtn.dataset.number || '';
+                try {
+                    await navigator.clipboard.writeText(number);
+                } catch (err) {
+                    const temp = document.createElement('textarea');
+                    temp.value = number;
+                    temp.setAttribute('readonly', '');
+                    temp.style.position = 'fixed';
+                    temp.style.opacity = '0';
+                    document.body.appendChild(temp);
+                    temp.select();
+                    temp.setSelectionRange(0, temp.value.length);
+                    document.execCommand('copy');
+                    temp.remove();
+                }
+
+                copyBtn.classList.add('copied');
+                copyBtn.innerHTML = '<i class="fas fa-check"></i> Tersalin';
+                setTimeout(() => {
+                    if (document.body.contains(copyBtn)) {
+                        copyBtn.classList.remove('copied');
+                        copyBtn.innerHTML = '<i class="fas fa-copy"></i> Salin';
+                    }
+                }, 1800);
+            });
+        }
     }
 
     paymentMethodButtons.forEach(btn => {
@@ -3392,12 +3475,8 @@
         const bonus = bonusEl ? cleanPrice(bonusEl.textContent) : '';
         const service = serviceNameFromDropdown(dropdownId);
         let type = '';
-        if (dropdownId === 'dropdown-wa') {
-            const wrapper = row.closest('.price-list-wrapper');
-            const reactionHeading = wrapper ? Array.from(wrapper.querySelectorAll('h4')).find(h => h.textContent.toLowerCase().includes('reaction')) : null;
-            const reactionComesBeforeRow = reactionHeading && (reactionHeading.compareDocumentPosition(row) & Node.DOCUMENT_POSITION_FOLLOWING);
-            type = reactionComesBeforeRow ? 'Reaction' : 'Followers';
-        }
+        if (dropdownId === 'dropdown-wa') type = 'Followers';
+        if (dropdownId === 'dropdown-wa-reaction') type = 'Reaction';
 
         row.classList.add('orderable');
         let main = row.querySelector('.price-row-main');
