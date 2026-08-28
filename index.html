@@ -7,58 +7,69 @@
   <meta name="keywords" content="WhatsApp Bot, Bot WA Premium, Sewa Bot WA, Suntik Followers, Followers Instagram, Followers TikTok, Reaction Saluran, King Queen Bot">
   <meta name="author" content="KING & QUEEN BOT">
 
-  <!-- Open Graph -->
   <meta property="og:title" content="KING & QUEEN BOT - Ndraa official">
   <meta property="og:description" content="Platform WhatsApp Bot premium & Layanan Digital otomatis 24 Jam Nonstop dengan performa tinggi dan aman.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/kong.jpg">
 
-  <!-- Preload Gambar (Rahasianya ada di sini!) -->
   <link rel="preload" href="assets/kong.jpg" as="image">
 
   <title>KING & QUEEN BOT - Ndraa official</title>
-
-    <!-- Google Fonts & Font Awesome Icons -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Loading Screen -->
+    <audio id="bgMusic" loop>
+        <source src="assets/music.mp3" type="audio/mpeg">
+        Browser kamu tidak mendukung pemutaran audio.
+    </audio>
+
+    <div class="music-float-container">
+        <button id="btn-music-toggle" class="floating-music-btn" aria-label="Putar Musik" title="Putar Musik" data-label="Putar Musik">
+            <i class="fas fa-compact-disc disc-icon"></i>
+        </button>
+    </div>
+
     <div id="loader">
         <div class="spinner"></div>
-        <div class="loader-text" id="loader-label">KING & QUEEN BOT</div>
+        <div class="loader-text" id="loader-label">
+            KING & QUEEN BOT 
+            <svg class="verified-badge-icon" viewBox="0 0 24 24" fill="#1DA1F2" width="20" height="20" style="vertical-align: middle; display: inline-block;">
+                <path d="M22.5 12.5c0-1.58-.875-2.925-2.125-3.6 0-.175.05-.375.05-.575 0-2.4-1.95-4.35-4.35-4.35-.975 0-1.875.35-2.575.925-1.225-1.075-2.95-1.375-4.525-.8-1.575.575-2.6 2.075-2.6 3.8 0 .2.05.4.05.575-1.25.675-2.125 2.025-2.125 3.6 0 1.575.875 2.925 2.125 3.6 0 .175-.05.375-.05.575 0 2.4 1.95 4.35 4.35 4.35.975 0 1.875-.35 2.575-.925 1.225 1.075 2.95 1.375 4.525.8 1.575-.575 2.6-2.075 2.6-3.8 0-.2-.05-.4-.05-.575 1.25-.675 2.125-2.025 2.125-3.6zm-11.875 4.85l-3.9-3.9 1.55-1.55 2.35 2.35 6.075-6.075 1.55 1.55-7.625 7.625z"></path>
+            </svg>
+        </div>
     </div>
 
-    <!-- Mouse Glow effect -->
     <div id="mouse-glow"></div>
-    <div class="site-controls" aria-label="Kontrol situs">
-        <button id="themeToggle" class="site-control-btn" type="button" aria-label="Aktifkan mode terang" title="Mode terang">
-            <i class="fas fa-sun"></i>
-        </button>
-        <button id="musicToggle" class="site-control-btn music-control" type="button" aria-label="Matikan musik" title="Musik ON">
-            <i class="fas fa-volume-high"></i>
-        </button>
-    </div>
 
-    <audio id="siteMusic" src="assets/music.mp3" loop preload="auto"></audio>
-
-
-    <!-- Background Orbs -->
     <div class="bg-glow-1"></div>
     <div class="bg-glow-2"></div>
 
-    <!-- CORE LANDING PAGE WRAPPER -->
     <div id="main-landing-content">
-        <!-- Navbar -->
         <header>
             <div class="container nav-container">
-                <a href="#" class="logo">KING & QUEEN</a>
-                <div class="menu-toggle" id="mobile-menu-btn">
-                    <i class="fas fa-bars"></i>
+                <a href="#" class="logo">
+                    KING & QUEEN 
+                    <svg class="verified-badge-icon" viewBox="0 0 24 24" fill="#1DA1F2" width="22" height="22" style="vertical-align: middle; display: inline-block; margin-left: 3px;">
+                        <path d="M22.5 12.5c0-1.58-.875-2.925-2.125-3.6 0-.175.05-.375.05-.575 0-2.4-1.95-4.35-4.35-4.35-.975 0-1.875.35-2.575.925-1.225-1.075-2.95-1.375-4.525-.8-1.575.575-2.6 2.075-2.6 3.8 0 .2.05.4.05.575-1.25.675-2.125 2.025-2.125 3.6 0 1.575.875 2.925 2.125 3.6 0 .175-.05.375-.05.575 0 2.4 1.95 4.35 4.35 4.35.975 0 1.875-.35 2.575-.925 1.225 1.075 2.95 1.375 4.525.8 1.575-.575 2.6-2.075 2.6-3.8 0-.2-.05-.4-.05-.575 1.25-.675 2.125-2.025 2.125-3.6zm-11.875 4.85l-3.9-3.9 1.55-1.55 2.35 2.35 6.075-6.075 1.55 1.55-7.625 7.625z"></path>
+                    </svg>
+                </a>
+                
+                <div class="nav-extra-controls">
+                    <button id="btn-theme-toggle" class="nav-ctrl-btn" aria-label="Ganti Mode Tema" title="Ganti Mode Tema">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <div class="menu-toggle" id="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </div>
                 </div>
+
                 <ul class="nav-menu" id="nav-links">
                     <li><a href="#" class="nav-link active">Home</a></li>
                     <li><a href="#about" class="nav-link">Tentang</a></li>
@@ -70,7 +81,6 @@
             </div>
         </header>
 
-        <!-- Hero Section -->
         <section class="hero">
             <div class="hero-cyber-grid"></div>
             <div class="hero-light-sphere-1"></div>
@@ -78,7 +88,14 @@
 
             <div class="container hero-grid">
                 <div class="hero-content">
-                    <h1>Welcome to <br><span>KING & QUEEN BOT</span></h1>
+                    <h1>Welcome to <br>
+                        <span>
+                            KING & QUEEN BOT 
+                            <svg class="verified-badge-icon" viewBox="0 0 24 24" fill="#1DA1F2" width="28" height="28" style="vertical-align: middle; display: inline-block; margin-left: 4px;">
+                                <path d="M22.5 12.5c0-1.58-.875-2.925-2.125-3.6 0-.175.05-.375.05-.575 0-2.4-1.95-4.35-4.35-4.35-.975 0-1.875.35-2.575.925-1.225-1.075-2.95-1.375-4.525-.8-1.575.575-2.6 2.075-2.6 3.8 0 .2.05.4.05.575-1.25.675-2.125 2.025-2.125 3.6 0 1.575.875 2.925 2.125 3.6 0 .175-.05.375-.05.575 0 2.4 1.95 4.35 4.35 4.35.975 0 1.875-.35 2.575-.925 1.225 1.075 2.95 1.375 4.525.8 1.575-.575 2.6-2.075 2.6-3.8 0-.2-.05-.4-.05-.575 1.25-.675 2.125-2.025 2.125-3.6zm-11.875 4.85l-3.9-3.9 1.55-1.55 2.35 2.35 6.075-6.075 1.55 1.55-7.625 7.625z"></path>
+                            </svg>
+                        </span>
+                    </h1>
                     <div class="typing-container">
                         <h2 id="typing-text" style="font-size: 1.5rem; font-weight: 600; color: var(--neon-blue);"></h2>
                     </div>
@@ -98,13 +115,11 @@
             </div>
         </section>
 
-        <!-- Kontak Owner & Admin Section -->
         <section class="contacts-section">
             <div class="container">
                 <h2 class="section-title fade-up" style="font-size: 1.8rem; margin-bottom: 30px;">Contact <span>Owner & Admin</span></h2>
                 <div class="contacts-container">
                     
-                    <!-- Ndra Official (Owner Utama) -->
                     <div class="glass-card contact-item-card fade-up">
                         <div class="contact-left-info">
                             <img src="assets/ndra.jpg" alt="Ndra Official" class="contact-avatar" style="border-color: var(--neon-blue);">
@@ -116,7 +131,6 @@
                         <a href="https://wa.me/6289510006505" target="_blank" class="btn-wa-contact"><i class="fab fa-whatsapp"></i> Chat WA</a>
                     </div>
 
-                    <!-- Nana (Admin) -->
                     <div class="glass-card contact-item-card fade-up">
                         <div class="contact-left-info">
                             <img src="assets/nana.jpg" alt="Nana" class="contact-avatar" style="border-color: var(--neon-purple);">
@@ -128,7 +142,6 @@
                         <a href="https://wa.me/6283110938317" target="_blank" class="btn-wa-contact"><i class="fab fa-whatsapp"></i> Chat WA</a>
                     </div>
 
-                    <!-- Zevanya (Admin) -->
                     <div class="glass-card contact-item-card fade-up">
                         <div class="contact-left-info">
                             <img src="assets/zevanya.jpg" alt="Zevanya" class="contact-avatar" style="border-color: var(--neon-purple);">
@@ -140,7 +153,6 @@
                         <a href="https://wa.me/6282249717551" target="_blank" class="btn-wa-contact"><i class="fab fa-whatsapp"></i> Chat WA</a>
                     </div>
 
-                    <!-- Rini (Admin) -->
                     <div class="glass-card contact-item-card fade-up">
                         <div class="contact-left-info">
                             <img src="assets/rini.jpg" alt="Rini" class="contact-avatar" style="border-color: var(--neon-purple);">
@@ -156,7 +168,6 @@
             </div>
         </section>
 
-        <!-- Tentang Section -->
         <section class="about" id="about">
             <div class="container">
                 <h2 class="section-title fade-up">Tentang <span>Platform Kami</span></h2>
@@ -168,7 +179,6 @@
             </div>
         </section>
 
-        <!-- Keunggulan Section -->
         <section class="features" id="features">
             <div class="container">
                 <h2 class="section-title fade-up">Mengapa Memilih <span>Bot Kami?</span></h2>
@@ -190,14 +200,13 @@
                     <div class="glass-card feature-card fade-up"><div class="feature-icon"><i class="fas fa-sync-alt"></i></div><div class="feature-info"><h3>Update Rutin</h3><p>Pembaluan berkala guna memastikan fitur terkini berjalan lancar.</p></div></div>
                     <div class="glass-card feature-card fade-up"><div class="feature-icon"><i class="fas fa-lock"></i></div><div class="feature-info"><h3>Aman Digunakan</h3><p>Enkripsi canggih meminimalisir risiko pada akun Anda.</p></div></div>
                     <div class="glass-card feature-card fade-up"><div class="feature-icon"><i class="fas fa-smile"></i></div><div class="feature-info"><h3>Mudah Digunakan</h3><p>Struktur navigasi command yang ramah untuk siapa saja.</p></div></div>
-                    <div class="glass-card feature-card fade-up"><div class="feature-icon"><i class="fas fa-tags"></i></div><div class="feature-info"><h3>Harga Terjangaur</h3><p>Kualitas super premium dengan tarif ramah kantong.</p></div></div>
+                    <div class="glass-card feature-card fade-up"><div class="feature-icon"><i class="fas fa-tags"></i></div><div class="feature-info"><h3>Harga Terjangkau</h3><p>Kualitas super premium dengan tarif ramah kantong.</p></div></div>
                     <div class="glass-card feature-card fade-up"><div class="feature-icon"><i class="fas fa-headset"></i></div><div class="feature-info"><h3>Support Cepat</h3><p>Bantuan teknis responsif langsung dari pihak pengembang.</p></div></div>
                     <div class="glass-card feature-card fade-up"><div class="feature-icon"><i class="fas fa-folder-plus"></i></div><div class="feature-info"><h3>Fitur Selalu Bertambah</h3><p>Daftar opsi perintah yang terus berkembang seiring waktu.</p></div></div>
                 </div>
             </div>
         </section>
 
-        <!-- Layanan Kami Section -->
         <section class="services" id="services">
             <div class="container">
                 <h2 class="section-title fade-up">Layanan Premium <span>Kami</span></h2>
@@ -221,7 +230,6 @@
             </div>
         </section>
 
-        <!-- Sistem Balance Section -->
         <section class="balance-sys">
             <div class="container balance-grid">
                 <div class="balance-left fade-up">
@@ -237,7 +245,6 @@
             </div>
         </section>
 
-        <!-- Statistik Section -->
         <section class="stats">
             <div class="container stats-grid">
                 <div class="stat-box fade-up"><h2 class="counter" data-target="1000">0</h2><p>User Aktif</p></div>
@@ -247,7 +254,6 @@
             </div>
         </section>
 
-        <!-- Testimoni Section -->
         <section class="testimonials">
             <div class="container">
                 <h2 class="section-title fade-up">Apa Kata <span>Mereka?</span></h2>
@@ -269,7 +275,6 @@
             </div>
         </section>
 
-        <!-- FAQ Section -->
         <section class="faq" id="faq">
             <div class="container">
                 <h2 class="section-title fade-up">Pertanyaan <span>Umum (FAQ)</span></h2>
@@ -283,42 +288,57 @@
             </div>
         </section>
 
-        <!-- Call to Action Section -->
         <section class="cta">
             <div class="container">
                 <div class="glass-card cta-box fade-up">
-                    <h2>Siap Bergabung Bersama <br><span style="background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">KING & QUEEN BOT?</span></h2>
+                    <h2>Siap Bergabung Bersama <br>
+                        <span style="background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                            KING & QUEEN BOT
+                            <svg class="verified-badge-icon" viewBox="0 0 24 24" fill="#1DA1F2" width="28" height="28" style="vertical-align: middle; display: inline-block; margin-left: 4px;">
+                                <path d="M22.5 12.5c0-1.58-.875-2.925-2.125-3.6 0-.175.05-.375.05-.575 0-2.4-1.95-4.35-4.35-4.35-.975 0-1.875.35-2.575.925-1.225-1.075-2.95-1.375-4.525-.8-1.575.575-2.6 2.075-2.6 3.8 0 .2.05.4.05.575-1.25.675-2.125 2.025-2.125 3.6 0 1.575.875 2.925 2.125 3.6 0 .175-.05.375-.05.575 0 2.4 1.95 4.35 4.35 4.35.975 0 1.875-.35 2.575-.925 1.225 1.075 2.95 1.375 4.525.8 1.575-.575 2.6-2.075 2.6-3.8 0-.2-.05-.4-.05-.575 1.25-.675 2.125-2.025 2.125-3.6zm-11.875 4.85l-3.9-3.9 1.55-1.55 2.35 2.35 6.075-6.075 1.55 1.55-7.625 7.625z"></path>
+                            </svg>?
+                        </span>
+                    </h2>
                     <p>Nikmati layanan WhatsApp Bot Premium, sistem otomatis, serta berbagai layanan digital terbaik dalam satu platform yang andal.</p>
                     <a href="https://wa.me/6289510006505" target="_blank" class="btn btn-primary"><i class="fab fa-whatsapp"></i> CHAT SEKARANG</a>
                 </div>
             </div>
         </section>
 
-        <!-- Footer -->
         <footer>
             <div class="container footer-container">
-                <div class="footer-copy">&copy; 2026 <strong>KING & QUEEN OFFICIAL <span class="verified-badge" aria-label="Verified">✔</span></strong></div>
+                <div class="footer-copy">
+                    &copy; 2026 <strong>KING & QUEEN BOT</strong>
+                    <svg class="verified-badge-icon" viewBox="0 0 24 24" fill="#1DA1F2" width="18" height="18" style="vertical-align: middle; display: inline-block; margin-left: 2px;">
+                        <path d="M22.5 12.5c0-1.58-.875-2.925-2.125-3.6 0-.175.05-.375.05-.575 0-2.4-1.95-4.35-4.35-4.35-.975 0-1.875.35-2.575.925-1.225-1.075-2.95-1.375-4.525-.8-1.575.575-2.6 2.075-2.6 3.8 0 .2.05.4.05.575-1.25.675-2.125 2.025-2.125 3.6 0 1.575.875 2.925 2.125 3.6 0 .175-.05.375-.05.575 0 2.4 1.95 4.35 4.35 4.35.975 0 1.875-.35 2.575-.925 1.225 1.075 2.95 1.375 4.525.8 1.575-.575 2.6-2.075 2.6-3.8 0-.2-.05-.4-.05-.575 1.25-.675 2.125-2.025 2.125-3.6zm-11.875 4.85l-3.9-3.9 1.55-1.55 2.35 2.35 6.075-6.075 1.55 1.55-7.625 7.625z"></path>
+                    </svg>. By Ndraa official
+                </div>
             </div>
         </footer>
     </div>
 
-    <!-- PRICING PAGE VIEW -->
     <div id="pricing-page-view">
         <div class="container" style="position: relative;">
             <div class="pricing-page-header">
                 <button class="btn btn-secondary btn-back-home" id="btn-back-to-home"><i class="fas fa-arrow-left"></i> Kembali ke Home</button>
                 <div style="font-size: 1.1rem; color: var(--neon-blue); font-weight: 600; margin-bottom: 8px; letter-spacing: 1px;">⚡ PREMIUM DIGITAL ECOSYSTEM 2026</div>
-                <h2 style="font-size: 2.2rem; font-weight: 800; margin-bottom: 15px; text-transform: uppercase;">LIST HARGA <span>SEWA K&Q</span></h2>
+                <h2 style="font-size: 2.2rem; font-weight: 800; margin-bottom: 15px; text-transform: uppercase;">
+                    LIST HARGA 
+                    <span>
+                        SEWA K&Q 
+                        <svg class="verified-badge-icon" viewBox="0 0 24 24" fill="#1DA1F2" width="24" height="24" style="vertical-align: middle; display: inline-block; margin-left: 3px;">
+                            <path d="M22.5 12.5c0-1.58-.875-2.925-2.125-3.6 0-.175.05-.375.05-.575 0-2.4-1.95-4.35-4.35-4.35-.975 0-1.875.35-2.575.925-1.225-1.075-2.95-1.375-4.525-.8-1.575.575-2.6 2.075-2.6 3.8 0 .2.05.4.05.575-1.25.675-2.125 2.025-2.125 3.6 0 1.575.875 2.925 2.125 3.6 0 .175-.05.375-.05.575 0 2.4 1.95 4.35 4.35 4.35.975 0 1.875-.35 2.575-.925 1.225 1.075 2.95 1.375 4.525.8 1.575-.575 2.6-2.075 2.6-3.8 0-.2-.05-.4-.05-.575 1.25-.675 2.125-2.025 2.125-3.6zm-11.875 4.85l-3.9-3.9 1.55-1.55 2.35 2.35 6.075-6.075 1.55 1.55-7.625 7.625z"></path>
+                        </svg>
+                    </span>
+                </h2>
                 <p style="color: var(--text-muted); font-size: 0.9rem; max-width: 750px; margin: 0 auto; line-height: 1.6;">
                     🚀 Sistem Cloud Automasi 24 Jam Nonstop &nbsp;&bull;&nbsp; 🛡️ Proteksi Penuh & Anti Denda Ilegal<br>
                     💳 Integrasi Smart Balance Otomatis &nbsp;&bull;&nbsp; 🔄 Saldo Fleksibel Dapat Ditukar Sewa / Akses Premium
                 </p>
             </div>
 
-            <!-- Kontainer Utama Tombol Grid -->
             <div class="split-pricing-container">
                 
-                <!-- BARIS 1 (KIRI): REGULER -->
                 <div class="tier-wrapper-box">
                     <div class="select-tier-box reguler-trigger" id="trigger-reguler">
                         <i class="fas fa-users tier-icon"></i>
@@ -354,7 +374,6 @@
                     </div>
                 </div>
 
-                <!-- BARIS 1 (KANAN): VIP -->
                 <div class="tier-wrapper-box">
                     <div class="select-tier-box vip-trigger" id="trigger-vip">
                         <i class="fas fa-crown tier-icon"></i>
@@ -388,7 +407,6 @@
                     </div>
                 </div>
 
-                <!-- BARIS 2 (KIRI): FOLLOWERS INSTAGRAM -->
                 <div class="tier-wrapper-box">
                     <div class="select-tier-box ig-trigger" id="trigger-ig" style="border-color: rgba(225, 48, 108, 0.3);">
                         <i class="fab fa-instagram tier-icon" style="color: #e1306c;"></i>
@@ -422,7 +440,6 @@
                     </div>
                 </div>
 
-                <!-- BARIS 2 (KANAN): SUNTIK WA -->
                 <div class="tier-wrapper-box">
                     <div class="select-tier-box wa-trigger" id="trigger-wa" style="border-color: rgba(37, 211, 102, 0.3);">
                         <i class="fab fa-whatsapp tier-icon" style="color: #25D366;"></i>
@@ -442,7 +459,7 @@
                                 <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">85 followers</span><span class="row-cost" style="background: rgba(37, 211, 102, 0.15); color: #25D366;">Rp4.250</span></div></div>
                                 <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">100 followers</span><span class="row-cost" style="background: rgba(37, 211, 102, 0.15); color: #25D366;">Rp5.000</span></div></div>
                                 <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">200 followers</span><span class="row-cost" style="background: rgba(37, 211, 102, 0.15); color: #25D366;">Rp10.000</span></div></div>
-                                <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">400 followers</span><span class="row-cost" style="background: rgba(37, 211, 102, 0.15); color: #25D366;">Rp20.000</span></div></div>
+                                <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">400 followers</span><span class="row-cost" style="background: rgba(37, 211, 102, 0.15); color: #20.000</span></div></div>
                                 <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">600 followers</span><span class="row-cost" style="background: rgba(37, 211, 102, 0.15); color: #25D366;">Rp30.000</span></div></div>
                                 <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">1.000 followers</span><span class="row-cost" style="background: rgba(37, 211, 102, 0.15); color: #25D366;">Rp50.000</span></div></div>
                             </div>
@@ -465,81 +482,253 @@
         </div>
     </div>
 
-    <!-- Scroll To Top Button -->
     <button id="scrollTop" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
 
-    <!-- Floating Action Buttons -->
     <div class="floating-container">
         <a href="https://whatsapp.com/channel/0029VaZ43rDLI8YeAAtq5M2T" target="_blank" class="floating-btn floating-btn-channel" data-label="Saluran WhatsApp"><i class="fas fa-bullhorn"></i></a>
         <a href="https://wa.me/6289510006505" target="_blank" class="floating-btn floating-btn-owner" data-label="Chat Owner"><i class="fab fa-whatsapp"></i></a>
     </div>
 
-    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // 1. Loading Screen
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+            setTimeout(() => {
+                loader.style.opacity = '0';
+                loader.style.visibility = 'hidden';
+            }, 500);
+        });
 
-<script>
-    // Theme + Music Controls
-    const root = document.documentElement;
-    const themeToggle = document.getElementById('themeToggle');
-    const musicToggle = document.getElementById('musicToggle');
-    const siteMusic = document.getElementById('siteMusic');
-
-    function setTheme(theme) {
-        root.setAttribute('data-theme', theme);
-        localStorage.setItem('kq-theme', theme);
-        if (themeToggle) {
-            themeToggle.innerHTML = theme === 'light'
-                ? '<i class="fas fa-moon"></i>'
-                : '<i class="fas fa-sun"></i>';
-            themeToggle.title = theme === 'light' ? 'Mode gelap' : 'Mode terang';
-            themeToggle.setAttribute('aria-label', theme === 'light' ? 'Aktifkan mode gelap' : 'Aktifkan mode terang');
+        // 2. Mouse Glow Effect (Desktop Only)
+        const mouseGlow = document.getElementById('mouse-glow');
+        if (window.innerWidth > 768) {
+            mouseGlow.style.display = 'block';
+            window.addEventListener('mousemove', (e) => {
+                mouseGlow.style.left = e.clientX + 'px';
+                mouseGlow.style.top = e.clientY + 'px';
+            });
         }
-    }
 
-    setTheme(localStorage.getItem('kq-theme') || 'dark');
+        // 3. Mobile Navigation Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const navLinks = document.getElementById('nav-links');
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            
+            if(navLinks.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
 
-    themeToggle?.addEventListener('click', () => {
-        setTheme(root.getAttribute('data-theme') === 'light' ? 'dark' : 'light');
-    });
-
-    function updateMusicButton(isPlaying) {
-        if (!musicToggle) return;
-        musicToggle.innerHTML = isPlaying
-            ? '<i class="fas fa-volume-high"></i>'
-            : '<i class="fas fa-volume-xmark"></i>';
-        musicToggle.title = isPlaying ? 'Matikan musik' : 'Nyalakan musik';
-        musicToggle.setAttribute('aria-label', isPlaying ? 'Matikan musik' : 'Nyalakan musik');
-        musicToggle.classList.toggle('is-playing', isPlaying);
-    }
-
-    async function startMusic() {
-        if (!siteMusic) return;
-        try {
-            await siteMusic.play();
-            updateMusicButton(true);
-        } catch (e) {
-            // Browser dapat memblokir autoplay bersuara. Coba lagi saat interaksi pertama.
-            updateMusicButton(false);
+        // 4. Efek Typing Text
+        const typingText = "The Best WhatsApp Bot Service.";
+        const typingEl = document.getElementById('typing-text');
+        let typeIndex = 0;
+        function type() {
+            if (typeIndex < typingText.length) {
+                typingEl.innerHTML += typingText.charAt(typeIndex);
+                typeIndex++;
+                setTimeout(type, 100);
+            }
         }
-    }
+        setTimeout(type, 1500);
 
-    musicToggle?.addEventListener('click', async () => {
-        if (!siteMusic) return;
-        if (siteMusic.paused) {
-            await startMusic();
-        } else {
-            siteMusic.pause();
-            updateMusicButton(false);
+        // 5. Scroll Fade Up Animasi
+        const fadeElements = document.querySelectorAll('.fade-up');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        fadeElements.forEach(el => observer.observe(el));
+
+        // 6. Tampilan Halaman Harga & Pindah View
+        const mainContent = document.getElementById('main-landing-content');
+        const pricingView = document.getElementById('pricing-page-view');
+        const openPricingBtn = document.getElementById('btn-open-pricing-page');
+        const forcePricingLinks = document.querySelectorAll('.force-pricing-page');
+        const backToHomeBtn = document.getElementById('btn-back-to-home');
+
+        function openPricingPage(e) {
+            e.preventDefault();
+            mainContent.style.display = 'none';
+            pricingView.style.display = 'block';
+            window.scrollTo(0, 0);
         }
-    });
 
-    // Default musik ON. Jika autoplay diblokir browser, mulai otomatis pada interaksi pertama.
-    window.addEventListener('load', startMusic, { once: true });
-    ['pointerdown', 'touchstart', 'keydown'].forEach(eventName => {
-        document.addEventListener(eventName, () => {
-            if (siteMusic?.paused) startMusic();
-        }, { once: true, passive: true });
-    });
-</script>
+        openPricingBtn.addEventListener('click', openPricingPage);
+        forcePricingLinks.forEach(link => link.addEventListener('click', openPricingPage));
 
+        backToHomeBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            pricingView.style.display = 'none';
+            mainContent.style.display = 'block';
+            window.scrollTo(0, 0);
+        });
+
+        // 7. Dropdown Pricing Boxes
+        const triggers = ['reguler', 'vip', 'ig', 'wa'];
+        triggers.forEach(tier => {
+            const btn = document.getElementById(`trigger-${tier}`);
+            const dropdown = document.getElementById(`dropdown-${tier}`);
+            
+            if (btn && dropdown) {
+                btn.addEventListener('click', () => {
+                    const isActive = btn.classList.contains('active');
+                    
+                    triggers.forEach(t => {
+                        const otherBtn = document.getElementById(`trigger-${t}`);
+                        const otherDrop = document.getElementById(`dropdown-${t}`);
+                        if(otherBtn) otherBtn.classList.remove('active');
+                        if(otherDrop) otherDrop.style.maxHeight = null;
+                    });
+
+                    if (!isActive) {
+                        btn.classList.add('active');
+                        dropdown.style.maxHeight = dropdown.scrollHeight + "px";
+                    }
+                });
+            }
+        });
+
+        // 8. Statistik Counter
+        const counters = document.querySelectorAll('.counter');
+        const counterObserver = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    const target = +counter.getAttribute('data-target');
+                    const duration = 2000;
+                    const increment = target / (duration / 16); 
+
+                    let current = 0;
+                    const updateCounter = () => {
+                        current += increment;
+                        if (current < target) {
+                            counter.innerText = Math.ceil(current);
+                            requestAnimationFrame(updateCounter);
+                        } else {
+                            counter.innerText = target + (target > 100 ? "+" : "");
+                        }
+                    };
+                    updateCounter();
+                    obs.unobserve(counter);
+                }
+            });
+        }, { threshold: 0.5 });
+        counters.forEach(c => counterObserver.observe(c));
+
+        // 9. Slider Testimonial
+        const sliderTrack = document.getElementById('sliderTrack');
+        const dotsContainer = document.getElementById('sliderDots');
+        const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+
+        slides.forEach((_, i) => {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            if (i === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(i));
+            dotsContainer.appendChild(dot);
+        });
+
+        const dots = document.querySelectorAll('.dot');
+
+        function goToSlide(index) {
+            currentSlide = index;
+            sliderTrack.style.transform = `translateX(-${100 * index}%)`;
+            dots.forEach(d => d.classList.remove('active'));
+            dots[index].classList.add('active');
+        }
+
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            goToSlide(currentSlide);
+        }, 4000);
+
+        // 10. FAQ Accordion
+        const accordionHeaders = document.querySelectorAll('.accordion-header');
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+                const content = header.nextElementSibling;
+                
+                const isActive = item.classList.contains('active');
+                
+                document.querySelectorAll('.accordion-item').forEach(acc => {
+                    acc.classList.remove('active');
+                    acc.querySelector('.accordion-content').style.maxHeight = null;
+                });
+
+                if (!isActive) {
+                    item.classList.add('active');
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        });
+
+        // 11. Scroll To Top Button
+        const scrollTopBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+        });
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // 12. Mode Gelap / Mode Terang Toggle & LocalStorage
+        const themeBtn = document.getElementById('btn-theme-toggle');
+        const savedTheme = localStorage.getItem('theme');
+        
+        if (savedTheme === 'light') {
+            document.body.classList.add('light-mode');
+            if (themeBtn) themeBtn.querySelector('i').className = 'fas fa-sun';
+        }
+
+        if (themeBtn) {
+            themeBtn.addEventListener('click', () => {
+                document.body.classList.toggle('light-mode');
+                const isLight = document.body.classList.contains('light-mode');
+                localStorage.setItem('theme', isLight ? 'light' : 'dark');
+                
+                const icon = themeBtn.querySelector('i');
+                if (isLight) {
+                    icon.className = 'fas fa-sun';
+                } else {
+                    icon.className = 'fas fa-moon';
+                }
+            });
+        }
+
+        // 13. Pemutar Musik Mengambang di Pojok Kiri Bawah (Pause/Play & Animasi Putar)
+        const musicBtn = document.getElementById('btn-music-toggle');
+        const bgMusic = document.getElementById('bgMusic');
+
+        if (musicBtn && bgMusic) {
+            musicBtn.addEventListener('click', () => {
+                if (bgMusic.paused) {
+                    bgMusic.play().then(() => {
+                        musicBtn.classList.add('playing');
+                        musicBtn.setAttribute('data-label', 'Pause Musik');
+                    }).catch(err => console.log("Audio play failed:", err));
+                } else {
+                    bgMusic.pause();
+                    musicBtn.classList.remove('playing');
+                    musicBtn.setAttribute('data-label', 'Putar Musik');
+                }
+            });
+        }
+    </script>
 </body>
 </html>
