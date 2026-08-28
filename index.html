@@ -282,23 +282,52 @@
         transform: scale(1.03);
     }
 
-    /* --- BLUE VERIFIED CHECK --- */
+    /* --- WHATSAPP / META-STYLE VERIFIED BADGE --- */
     .verified-check {
         display: inline-flex;
         align-items: center;
         justify-content: center;
+        position: relative;
         width: 20px;
         height: 20px;
-        margin-left: 5px;
-        font-size: 0.75rem;
-        font-weight: 800;
-        color: #fff;
-        background: #1689ff;
+        min-width: 0;
+        margin-left: 6px;
         border-radius: 50%;
-        vertical-align: middle;
-        box-shadow: 0 0 10px rgba(22, 137, 255, 0.5);
-        -webkit-text-fill-color: #fff;
-        background-image: none;
+        vertical-align: -3px;
+        background: #1689ff;
+        border: 1px solid rgba(255,255,255,0.22);
+        box-shadow:
+            0 1px 2px rgba(0,0,0,0.22),
+            0 0 9px rgba(22,137,255,0.38);
+        -webkit-text-fill-color: initial;
+        font-size: 0;
+        line-height: 1;
+    }
+
+    .verified-check::after {
+        content: "";
+        display: block;
+        width: 5px;
+        height: 9px;
+        margin-top: -2px;
+        border-right: 2.2px solid #fff;
+        border-bottom: 2.2px solid #fff;
+        transform: rotate(45deg) scaleX(0.92);
+        transform-origin: center;
+    }
+
+    /* Badge yang lebih kecil untuk footer */
+    .footer-copy .verified-check {
+        margin-left: 3px;
+        vertical-align: -2px;
+        border-width: 1px;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.18);
+    }
+
+    .footer-copy .verified-check::after {
+        width: 4px;
+        height: 7px;
+        border-width: 1.6px;
     }
 
     /* --- FADE UP SCROLL ANIMATION --- */
@@ -1636,7 +1665,7 @@
 
             <a href="#" class="logo">
                 KING & QUEEN
-                <span class="verified-check" title="Verified">✔</span>
+                <span class="verified-check" title="Verified"></span>
             </a>
 
             <div class="nav-right">
@@ -1682,7 +1711,7 @@
                     Welcome to <br>
                     <span>
                         KING & QUEEN BOT
-                        <span class="verified-check" title="Verified">✔</span>
+                        <span class="verified-check" title="Verified"></span>
                     </span>
                 </h1>
 
@@ -1732,7 +1761,7 @@
                         <div class="contact-details">
                             <h3>
                                 Ndra Official
-                                <span class="verified-check" style="width:16px;height:16px;font-size:0.58rem;">✔</span>
+                                <span class="verified-check" style="width:16px;height:16px;font-size:0.58rem;"></span>
                             </h3>
                             <span class="role-tag role-owner">Owner Utama</span>
                         </div>
@@ -2096,7 +2125,7 @@
                     <span style="background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
                         KING & QUEEN BOT
                     </span>
-                    <span class="verified-check">✔</span>?
+                    <span class="verified-check"></span>?
                 </h2>
 
                 <p>
@@ -2116,7 +2145,7 @@
         <div class="container footer-container">
             <div class="footer-copy">
                 &copy; 2026 <strong>KING & QUEEN BOT</strong>
-                <span class="verified-check" style="width:15px;height:15px;font-size:0.52rem;">✔</span>
+                <span class="verified-check" style="width:15px;height:15px;font-size:0.52rem;"></span>
                 . By Ndraa official
             </div>
         </div>
@@ -3052,12 +3081,16 @@
 
     /* =========================================================
        13. BACKGROUND MUSIC
-       
+
        DEFAULT STATUS = ON
-       
-       Browser bisa memblokir autoplay audio bersuara.
-       Karena itu kita coba autoplay, lalu ulangi setelah
-       interaksi pertama pengguna.
+
+       Catatan browser:
+       Autoplay audio bersuara dapat diblokir browser. Kita
+       tetap mempertahankan status ON, lalu mencoba kembali
+       pada SETIAP interaksi sampai berhasil. Bug versi lama
+       menghapus listener setelah percobaan pertama gagal,
+       sehingga musik baru hidup setelah tombol dimatikan
+       lalu dinyalakan lagi.
     ========================================================= */
     const backgroundMusic =
         document.getElementById('backgroundMusic');
@@ -3066,6 +3099,7 @@
         document.getElementById('musicToggle');
 
     let musicPlaying = true;
+    let musicUnlocked = false;
 
     function setMusicUI(isPlaying) {
 
@@ -3074,7 +3108,6 @@
         if (isPlaying) {
 
             musicToggle.classList.add('playing');
-
             musicToggle.classList.remove('paused');
 
             musicToggle.setAttribute(
@@ -3095,7 +3128,6 @@
         } else {
 
             musicToggle.classList.remove('playing');
-
             musicToggle.classList.add('paused');
 
             musicToggle.setAttribute(
@@ -3117,32 +3149,45 @@
 
     async function startMusic() {
 
+        if (musicUnlocked) {
+            return false;
+        }
+
         try {
 
             await backgroundMusic.play();
 
+            musicUnlocked = true;
             setMusicUI(true);
+
+            removeMusicUnlockListeners();
+
+            return true;
 
         } catch (error) {
 
             /*
              * Autoplay diblokir browser.
-             * Status tombol tetap ON sehingga musik akan
-             * mencoba diputar setelah interaksi pengguna.
+             * JANGAN mengubah status ON menjadi OFF.
+             * Listener tetap aktif agar percobaan berikutnya
+             * bisa berhasil ketika user berinteraksi.
              */
-
             setMusicUI(true);
+
+            return false;
         }
     }
 
     function stopMusic() {
 
         backgroundMusic.pause();
-
+        musicUnlocked = false;
         setMusicUI(false);
     }
 
-    musicToggle.addEventListener('click', async () => {
+    musicToggle.addEventListener('click', async (event) => {
+
+        event.stopPropagation();
 
         if (musicPlaying) {
 
@@ -3150,26 +3195,29 @@
 
         } else {
 
-            try {
+            /*
+             * User memang meminta musik dinyalakan.
+             * Ubah UI ke ON dulu, lalu coba play().
+             */
+            setMusicUI(true);
 
-                await backgroundMusic.play();
+            const success = await startMusic();
 
-                setMusicUI(true);
-
-            } catch (error) {
-
+            if (!success) {
                 setMusicUI(false);
             }
         }
     });
 
     /*
-     * Default ON.
+     * Default benar-benar ON.
      */
     setMusicUI(true);
 
     /*
      * Coba autoplay ketika halaman selesai.
+     * Kalau browser menolak, sistem akan mencoba lagi
+     * pada interaksi pengguna berikutnya.
      */
     window.addEventListener('load', () => {
 
@@ -3178,32 +3226,42 @@
     });
 
     /*
-     * Jika autoplay diblokir browser,
-     * musik akan dicoba lagi saat user pertama kali
-     * melakukan interaksi.
+     * Unlock autoplay.
+     *
+     * Listener TIDAK memakai { once: true }.
+     * Listener baru dilepas setelah play() benar-benar
+     * berhasil. Jadi kalau klik/tap pertama gagal, klik/tap
+     * berikutnya tetap akan mencoba memutar musik.
      */
     const firstInteractionEvents = [
         'click',
         'touchstart',
+        'pointerdown',
         'keydown'
     ];
 
-    function unlockMusic() {
+    async function unlockMusic() {
 
-        if (musicPlaying && backgroundMusic.paused) {
-
-            backgroundMusic.play()
-                .then(() => {
-                    setMusicUI(true);
-                })
-                .catch(() => {});
+        if (!musicPlaying || musicUnlocked) {
+            return;
         }
 
+        const success = await startMusic();
+
+        if (success) {
+            removeMusicUnlockListeners();
+        }
+    }
+
+    function removeMusicUnlockListeners() {
+
         firstInteractionEvents.forEach(event => {
+
             document.removeEventListener(
                 event,
                 unlockMusic
             );
+
         });
     }
 
@@ -3212,11 +3270,30 @@
         document.addEventListener(
             event,
             unlockMusic,
-            { once: true }
+            { passive: true }
         );
 
     });
 
+    /*
+     * Sinkronkan UI jika audio berhenti karena kondisi
+     * eksternal. Jangan mengubah status manual OFF.
+     */
+    backgroundMusic.addEventListener('play', () => {
+
+        if (musicPlaying) {
+            setMusicUI(true);
+        }
+
+    });
+
+    backgroundMusic.addEventListener('pause', () => {
+
+        if (musicPlaying && musicUnlocked) {
+            musicUnlocked = false;
+        }
+
+    });
 </script>
 
 </body>
