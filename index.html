@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Layanan WhatsApp Bot Premium dengan performa tinggi, fitur lengkap, server stabil, dan sistem otomatis untuk kebutuhan pribadi maupun bisnis Anda.">
+  <meta name="keywords" content="WhatsApp Bot, Bot WA Premium, Sewa Bot WA, Suntik Followers, Followers Instagram, Followers TikTok, Reaction Saluran, King Queen Bot">
+  <meta name="author" content="KING & QUEEN BOT">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="KING & QUEEN BOT - Ndraa official">
+  <meta property="og:description" content="Platform WhatsApp Bot premium & Layanan Digital otomatis 24 Jam Nonstop dengan performa tinggi dan aman.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/kong.jpg">
+
+  <!-- Preload Gambar (Rahasianya ada di sini!) -->
+  <link rel="preload" href="assets/kong.jpg" as="image">
+
+  <title>KING & QUEEN BOT - Ndraa official</title>
+
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div id="loader">
+        <div class="spinner"></div>
+        <div class="loader-text" id="loader-label">KING & QUEEN BOT</div>
+    </div>
+
+    <!-- Mouse Glow effect -->
+    <div id="mouse-glow"></div>
+    <div class="site-controls" aria-label="Kontrol situs">
+        <button id="themeToggle" class="site-control-btn" type="button" aria-label="Aktifkan mode terang" title="Mode terang">
+            <i class="fas fa-sun"></i>
+        </button>
+        <button id="musicToggle" class="site-control-btn music-control" type="button" aria-label="Matikan musik" title="Musik ON">
+            <i class="fas fa-volume-high"></i>
+        </button>
+    </div>
+
+    <audio id="siteMusic" src="assets/music.mp3" loop preload="auto"></audio>
+
+
+    <!-- Background Orbs -->
+    <div class="bg-glow-1"></div>
+    <div class="bg-glow-2"></div>
+
+    <!-- CORE LANDING PAGE WRAPPER -->
+    <div id="main-landing-content">
+        <!-- Navbar -->
+        <header>
+            <div class="container nav-container">
+                <a href="#" class="logo">KING & QUEEN</a>
+                <div class="menu-toggle" id="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-menu" id="nav-links">
+                    <li><a href="#" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">Tentang</a></li>
+                    <li><a href="#features" class="nav-link">Keunggulan</a></li>
+                    <li><a href="#services" class="nav-link">Layanan</a></li>
+                    <li><a href="#" class="nav-link force-pricing-page">Harga</a></li>
+                    <li><a href="#faq" class="nav-link">FAQ</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-cyber-grid"></div>
+            <div class="hero-light-sphere-1"></div>
+            <div class="hero-light-sphere-2"></div>
+
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <h1>Welcome to <br><span>KING & QUEEN BOT</span></h1>
+                    <div class="typing-container">
+                        <h2 id="typing-text" style="font-size: 1.5rem; font-weight: 600; color: var(--neon-blue);"></h2>
+                    </div>
+                    <p class="hero-subtitle">
+                        Layanan WhatsApp Bot Premium dengan performa tinggi, fitur lengkap, server stabil, dan sistem otomatis yang siap membantu kebutuhan pribadi maupun bisnis Anda.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="https://wa.me/6289510006505" target="_blank" class="btn btn-primary"><i class="fab fa-whatsapp"></i> Chat Sekarang</a>
+                        <a href="#" id="btn-open-pricing-page" class="btn btn-secondary"><i class="fas fa-tags"></i> Lihat Harga</a>
+                    </div>
+                </div>
+                <div class="hero-img-container">
+                    <div class="hero-img-wrapper">
+                        <img src="assets/KING AND QUEEN.jpg" alt="King & Queen Bot Visual Platform">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kontak Owner & Admin Section -->
+        <section class="contacts-section">
+            <div class="container">
+                <h2 class="section-title fade-up" style="font-size: 1.8rem; margin-bottom: 30px;">Contact <span>Owner & Admin</span></h2>
+                <div class="contacts-container">
+                    
+                    <!-- Ndra Official (Owner Utama) -->
+                    <div class="glass-card contact-item-card fade-up">
+                        <div class="contact-left-info">
+                            <img src="assets/ndra.jpg" alt="Ndra Official" class="contact-avatar" style="border-color: var(--neon-blue);">
+                            <div class="contact-details">
+                                <h3>Ndra Official</h3>
+                                <span class="role-tag role-owner">Owner Utama</span>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/6289510006505" target="_blank" class="btn-wa-contact"><i class="fab fa-whatsapp"></i> Chat WA</a>
+                    </div>
+
+                    <!-- Nana (Admin) -->
+                    <div class="glass-card contact-item-card fade-up">
+                        <div class="contact-left-info">
+                            <img src="assets/nana.jpg" alt="Nana" class="contact-avatar" style="border-color: var(--neon-purple);">
+                            <div class="contact-details">
+                                <h3>Nana</h3>
+                                <span class="role-tag role-admin">Admin</span>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/6283110938317" target="_blank" class="btn-wa-contact"><i class="fab fa-whatsapp"></i> Chat WA</a>
+                    </div>
+
+                    <!-- Zevanya (Admin) -->
+                    <div class="glass-card contact-item-card fade-up">
+                        <div class="contact-left-info">
+                            <img src="assets/zevanya.jpg" alt="Zevanya" class="contact-avatar" style="border-color: var(--neon-purple);">
+                            <div class="contact-details">
+                                <h3>Zevanya</h3>
+                                <span class="role-tag role-admin">Admin</span>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/6282249717551" target="_blank" class="btn-wa-contact"><i class="fab fa-whatsapp"></i> Chat WA</a>
+                    </div>
+
+                    <!-- Rini (Admin) -->
+                    <div class="glass-card contact-item-card fade-up">
+                        <div class="contact-left-info">
+                            <img src="assets/rini.jpg" alt="Rini" class="contact-avatar" style="border-color: var(--neon-purple);">
+                            <div class="contact-details">
+                                <h3>Rini</h3>
+                                <span class="role-tag role-admin">Admin</span>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/6283879489005" target="_blank" class="btn-wa-contact"><i class="fab fa-whatsapp"></i> Chat WA</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Tentang Section -->
+        <section class="about" id="about">
+            <div class="container">
+                <h2 class="section-title fade-up">Tentang <span>Platform Kami</span></h2>
+                <div class="glass-card coding-box about-box fade-up">
+                    <p class="about-text">
+                        <strong>KING & QUEEN BOT</strong> merupakan platform WhatsApp Bot premium yang selalu dikembangkan dengan teknologi terbaru agar memberikan pengalaman terbaik. Kami berkomitmen untuk menyajikan sistem interaksi AI dan automasi terdepan yang cepat, stabil, aman, dan dirancang sesederhana mungkin agar mudah digunakan oleh seluruh lapisan pengguna baik pemula maupun korporasi.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Keunggulan Section -->
+        <section class="features" id="features">
+            <div class="container">
+                <h2 class="section-title fade-up">Mengapa Memilih <span>Bot Kami?</span></h2>
+                <div class="features-grid">
+                    <div class="glass-card feature-card fade-up"><div class="feature-icon"><i class="fas fa-clock"></i></div><div class="feature-info"><h3>Online 24 Jam Nonstop</h3><p>Bot aktif terus-menerus memproses perintah tanpa henti.</p></div></div>
+                    <div class="glass-card feature-card fade-up"><div class="feature-icon"><i class="fas fa-server"></i></div><div class="feature-info"><h3>Server Super Stable</h3><p>Infrastruktur awan premium menjamin uptime maksimal.</p></div></div>
+                    <div class="glass-card feature-card fade-up"><div class="feature-icon"><i class="fas fa-bolt"></i></div><div class="feature-info"><h3>Fast Response</h3><p>Eksekusi perintah super cepat dalam hitungan milidetik.</p></div></div>
+                    <div class="glass-card feature-card fade-up"><div class="feature-icon"><i class="fas fa-brain"></i></div><div class="feature-info"><h3>AI Chat</h3><p>Kecerdasan buatan responsif mirip manusia asli.</p></div></div>
+                    <div class="glass-card feature-card fade-up"><div class="feature-icon"><i class="fas fa-download"></i></div><div class="feature-info"><h3>Downloader Lengkap</h3><p>Unduh media dari berbagai platform sosial dengan mudah.</p></div></div>
+                    <div class="glass-card feature-card fade-up"><div class="feature-icon"><i class="fas fa-palette"></i></div><div class="feature-info"><h3>Sticker Maker</h3><p>Konversi foto dan video menjadi stiker secara instan.</p></div></div>
+                    <div class="glass-card feature-card fade-up"><div class="feature-icon"><i class="fas fa-sliders-h"></i></div><div class="feature-info"><h3>Convert Audio & Video</h3><p>Ubah berbagai format berkas audio visual secara praktis.</p></div></div>
+                    <div class="glass-card feature-card fade-up"><div class="feature-icon"><i class="fas fa-upload"></i></div><div class="feature-info"><h3>Upload Media</h3><p>Mendukung pengunggahan berkas besar dengan aman.</p></div></div>
+                    <div class="glass-card feature-card fade-up"><div class="feature-icon"><i class="fas fa-cloud-download-alt"></i></div><div class="feature-info"><h3>Download Media</h3><p>Penyimpanan eksternal unduhan berkecepatan tinggi.</p></div></div>
+                    <div class="glass-card feature-card fade-up"><div class="feature-icon"><i class="fas fa-users-cog"></i></div><div class="feature-info"><h3>Group Management</h3><p>Kendali penuh fitur admin grup secara otomatis.</p></div></div>
+                    <div class="glass-card feature-card fade-up"><div class="feature-icon"><i class="fas fa-door-open"></i></div><div class="feature-info"><h3>Welcome & Goodbye</h3><p>Sambut dan lepas member grup dengan templat estetik.</p></div></div>
+                    <div class="glass-card feature-card fade-up"><div class="feature-icon"><i class="fas fa-link-slash"></i></div><div class="feature-info"><h3>Anti Link</h3><p>Proteksi grup dari penyebaran link ilegal dan berbahaya.</p></div></div>
+                    <div class="glass-card feature-card fade-up"><div class="feature-icon"><i class="fas fa-shield-virus"></i></div><div class="feature-info"><h3>Anti Spam</h3><p>Menjaga ruang obrolan agar terhindar dari banjir pesan.</p></div></div>
+                    <div class="glass-card feature-card fade-up"><div class="feature-icon"><i class="fas fa-user-shield"></i></div><div class="feature-info"><h3>Owner Friendly</h3><p>Konfigurasi mudah disesuaikan oleh pemilik bot.</p></div></div>
+                    <div class="glass-card feature-card fade-up"><div class="feature-icon"><i class="fas fa-sync-alt"></i></div><div class="feature-info"><h3>Update Rutin</h3><p>Pembaluan berkala guna memastikan fitur terkini berjalan lancar.</p></div></div>
+                    <div class="glass-card feature-card fade-up"><div class="feature-icon"><i class="fas fa-lock"></i></div><div class="feature-info"><h3>Aman Digunakan</h3><p>Enkripsi canggih meminimalisir risiko pada akun Anda.</p></div></div>
+                    <div class="glass-card feature-card fade-up"><div class="feature-icon"><i class="fas fa-smile"></i></div><div class="feature-info"><h3>Mudah Digunakan</h3><p>Struktur navigasi command yang ramah untuk siapa saja.</p></div></div>
+                    <div class="glass-card feature-card fade-up"><div class="feature-icon"><i class="fas fa-tags"></i></div><div class="feature-info"><h3>Harga Terjangaur</h3><p>Kualitas super premium dengan tarif ramah kantong.</p></div></div>
+                    <div class="glass-card feature-card fade-up"><div class="feature-icon"><i class="fas fa-headset"></i></div><div class="feature-info"><h3>Support Cepat</h3><p>Bantuan teknis responsif langsung dari pihak pengembang.</p></div></div>
+                    <div class="glass-card feature-card fade-up"><div class="feature-icon"><i class="fas fa-folder-plus"></i></div><div class="feature-info"><h3>Fitur Selalu Bertambah</h3><p>Daftar opsi perintah yang terus berkembang seiring waktu.</p></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Layanan Kami Section -->
+        <section class="services" id="services">
+            <div class="container">
+                <h2 class="section-title fade-up">Layanan Premium <span>Kami</span></h2>
+                <p class="services-desc fade-up">Seluruh layanan diproses secara otomatis menggunakan sistem sehingga lebih cepat, aman, efisien, dan siap melayani Anda dalam hitungan detik.</p>
+                
+                <div class="services-grid">
+                    <div class="glass-card service-card fade-up"><div class="service-icon-box"><i class="fas fa-rocket"></i></div><h3>Sewa Bot WhatsApp</h3><p>Integrasikan asisten otomatis berperforma tinggi langsung ke grup atau nomor personal Anda secara realtime.</p></div>
+                    <div class="glass-card service-card fade-up"><div class="service-icon-box"><i class="fas fa-crown"></i></div><h3>Premium Bot</h3><p>Akses fitur eksklusif tanpa limitasi batas penggunaan harian dengan jalur prioritas tinggi.</p></div>
+                    <div class="glass-card service-card fade-up"><div class="service-icon-box"><i class="fab fa-instagram"></i></div><h3>Suntik Followers Instagram</h3><p>Tingkatkan kredibilitas profil media sosial secara instan melalui sistem penambah pengikut otomatis.</p></div>
+                    <div class="glass-card service-card fade-up"><div class="service-icon-box"><i class="fab fa-tiktok"></i></div><h3>Suntik Followers TikTok</h3><p>Perluas jangkauan konten dan raih audiens baru di platform video pendek terpopuler dengan cepat.</p></div>
+                    <div class="glass-card service-card fade-up"><div class="service-icon-box"><i class="fas fa-bullhorn"></i></div><h3>Suntik Followers Saluran WA</h3><p>Optimalkan saluran informasi publik Anda agar tampak profesional dengan basis pengikut yang besar.</p></div>
+                    <div class="glass-card service-card fade-up"><div class="service-icon-box"><i class="fas fa-thumbs-up"></i></div><h3>Reaction Saluran WhatsApp</h3><p>Ramaikan interaksi postingan di saluran broadcast Anda menggunakan ribuan reaksi instan otomatis.</p></div>
+                    <div class="glass-card service-card fade-up"><div class="service-icon-box"><i class="fab fa-facebook"></i></div><h3>Suntik Followers Facebook</h3><p>Kembangkan branding fanspage atau profil pribadi guna meningkatkan jangkauan bisnis digital Anda.</p></div>
+                    <div class="glass-card service-card fade-up"><div class="service-icon-box"><i class="fab fa-telegram"></i></div><h3>Suntik Followers Telegram</h3><p>Tambahkan basis anggota grup atau pengikut channel info Telegram secara kilat tanpa ribet.</p></div>
+                    <div class="glass-card service-card fade-up"><div class="service-icon-box"><i class="fas fa-heart"></i></div><h3>Likes Booster</h3><p>Optimalkan metrik suka (likes) di berbagai postingan media sosial Anda agar mudah masuk beranda FYP/Eksplor.</p></div>
+                    <div class="glass-card service-card fade-up"><div class="service-icon-box"><i class="fas fa-eye"></i></div><h3>Views Booster</h3><p>Tingkatkan metrik jumlah tayangan video Anda demi menaikkan nilai interaksi algoritma.</p></div>
+                    <div class="glass-card service-card fade-up"><div class="service-icon-box"><i class="fab fa-youtube"></i></div><h3>Subscribers</h3><p>Bantu channel Anda memenuhi syarat monetisasi penonton secara efisien melalui suntikan aman.</p></div>
+                    <div class="glass-card service-card fade-up"><div class="service-icon-box"><i class="fas fa-users"></i></div><h3>Members</h3><p>Tambahkan kuantitas anggota komunitas digital Anda agar terlihat aktif dan kredibel.</p></div>
+                    <div class="glass-card service-card fade-up" style="grid-column: 1 / -1;"><div class="service-icon-box"><i class="fas fa-cubes"></i></div><h3>Jasa Digital Lainnya</h3><p>Menyediakan beragam solusi pemrograman, optimasi media sosial, manajemen server VPS, serta kebutuhan web-development khusus lainnya sesuai request Anda.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sistem Balance Section -->
+        <section class="balance-sys">
+            <div class="container balance-grid">
+                <div class="balance-left fade-up">
+                    <h2>Sistem <span>Balance Otomatis</span></h2>
+                    <p>KING & QUEEN BOT memiliki sistem balance otomatis yang memudahkan pengguna melakukan pembelian layanan hanya dalam hitungan detik. Balance dapat digunakan untuk membeli berbagai layanan digital.</p>
+                    <p>Selain itu, balance juga dapat ditukarkan secara otomatis tanpa perlu menunggu konfirmasi manual dari admin. Proses instan 24 jam penuh.</p>
+                </div>
+                <div class="balance-right">
+                    <div class="glass-card balance-item fade-up"><i class="fas fa-bolt"></i><h4>Premium Bot</h4></div>
+                    <div class="glass-card balance-item fade-up"><i class="fas fa-robot"></i><h4>Sewa Bot</h4></div>
+                    <div class="glass-card balance-item fade-up" style="grid-column: 1 / -1;"><i class="fas fa-globe"></i><h4>Layanan Digital Otomatis</h4></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistik Section -->
+        <section class="stats">
+            <div class="container stats-grid">
+                <div class="stat-box fade-up"><h2 class="counter" data-target="1000">0</h2><p>User Aktif</p></div>
+                <div class="stat-box fade-up"><h2 class="counter" data-target="25000">0</h2><p>Order Berhasil</p></div>
+                <div class="stat-box fade-up"><h2><span class="counter" data-target="99">0</span>%</h2><p>Kepuasan Pelanggan</p></div>
+                <div class="stat-box fade-up"><h2>24/7</h2><p>Online</p></div>
+            </div>
+        </section>
+
+        <!-- Testimoni Section -->
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title fade-up">Apa Kata <span>Mereka?</span></h2>
+                <div class="slider-wrapper fade-up">
+                    <div class="slider-track" id="sliderTrack">
+                        <div class="slide"><div class="glass-card testi-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="comment">"Bot paling stabil yang pernah saya gunakan."</p><div class="profile"><div class="avatar">A</div><div class="user-info"><span class="username">Andi S.</span><span class="user-role">Developer</span></div></div></div></div>
+                        <div class="slide"><div class="glass-card testi-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="comment">"Owner ramah dan premium langsung aktif."</p><div class="profile"><div class="avatar">B</div><div class="user-info"><span class="username">Budi H.</span><span class="user-role">Online Shop Owner</span></div></div></div></div>
+                        <div class="slide"><div class="glass-card testi-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="comment">"Harga murah tapi kualitasnya premium."</p><div class="profile"><div class="avatar">C</div><div class="user-info"><span class="username">Citra A.</span><span class="user-role">Mahasiswi</span></div></div></div></div>
+                        <div class="slide"><div class="glass-card testi-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="comment">"Suntik followers cepat masuk."</p><div class="profile"><div class="avatar">D</div><div class="user-info"><span class="username">Dani K.</span><span class="user-role">Content Creator</span></div></div></div></div>
+                        <div class="slide"><div class="glass-card testi-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="comment">"Reaction saluran WhatsApp langsung diproses."</p><div class="profile"><div class="avatar">E</div><div class="user-info"><span class="username">Eka W.</span><span class="user-role">Influencer</span></div></div></div></div>
+                        <div class="slide"><div class="glass-card testi-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="comment">"Server benar-benar stabil."</p><div class="profile"><div class="avatar">F</div><div class="user-info"><span class="username">Fahmi R.</span><span class="user-role">Gamer</span></div></div></div></div>
+                        <div class="slide"><div class="glass-card testi-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="comment">"Sudah langganan lama dan sangat puas."</p><div class="profile"><div class="avatar">G</div><div class="user-info"><span class="username">Gita N.</span><span class="user-role">Reseller</span></div></div></div></div>
+                        <div class="slide"><div class="glass-card testi-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="comment">"Fitur downloader lengkap."</p><div class="profile"><div class="avatar">H</div><div class="user-info"><span class="username">Hendra M.</span><span class="user-role">Trader</span></div></div></div></div>
+                        <div class="slide"><div class="glass-card testi-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="comment">"Pelayanan sangat memuaskan."</p><div class="profile"><div class="avatar">I</div><div class="user-info"><span class="username">Indah P.</span><span class="user-role">Dropshipper</span></div></div></div></div>
+                        <div class="slide"><div class="glass-card testi-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="comment">"Recommended untuk semua orang."</p><div class="profile"><div class="avatar">J</div><div class="user-info"><span class="username">Joko W.</span><span class="user-role">Entrepreneur</span></div></div></div></div>
+                    </div>
+                    <div class="slider-dots" id="sliderDots"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq" id="faq">
+            <div class="container">
+                <h2 class="section-title fade-up">Pertanyaan <span>Umum (FAQ)</span></h2>
+                <div class="faq-wrapper">
+                    <div class="accordion-item fade-up"><div class="accordion-header"><h3>Apakah bot online 24 jam?</h3><i class="fas fa-chevron-down accordion-icon"></i></div><div class="accordion-content"><p>Ya, benar. Sistem bot kami di-hosting pada infrastruktur server VPS berkemampuan tinggi dengan jaminan uptime maksimal, sehingga siap memproses pesan Anda kapan pun selama 24 jam nonstop.</p></div></div>
+                    <div class="accordion-item fade-up"><div class="accordion-header"><h3>Bagaimana cara menyewa bot?</h3><i class="fas fa-chevron-down accordion-icon"></i></div><div class="accordion-content"><p>Sangat mudah! Ya, Anda cukup menekan tombol "Chat Sekarang" atau "Sewa Sekarang" di web ini untuk langsung terhubung dengan WhatsApp resmi kami. Sistem otomatis atau tim admin kami akan memandu langkah pendaftaran Anda.</p></div></div>
+                    <div class="accordion-item fade-up"><div class="accordion-header"><h3>Apakah tersedia Premium Bot?</h3><i class="fas fa-chevron-down accordion-icon"></i></div><div class="accordion-content"><p>Tentu saja. Layanan Premium Bot dirancang bagi Anda yang menginginkan limitasi tanpa batas (unlimited) penggunaan harian serta akses ke fitur eksklusif kustomisasi tingkat lanjut.</p></div></div>
+                    <div class="accordion-item fade-up"><div class="accordion-header"><h3>Apakah balance bisa ditukar menjadi Premium atau Sewa Bot?</h3><i class="fas fa-chevron-down accordion-icon"></i></div><div class="accordion-content"><p>Ya. Sistem terintegrasi kami mendukung penukaran saldo (balance) secara realtime otomatis menjadi masa aktif sewa bot maupun status akun Premium tanpa perlu approval manual admin.</p></div></div>
+                    <div class="accordion-item fade-up"><div class="accordion-header"><h3>Apakah tersedia layanan suntik followers?</h3><i class="fas fa-chevron-down accordion-icon"></i></div><div class="accordion-content"><p>Tersedia lengkap. Kami menyediakan panel optimasi media sosial seperti suntik followers, likes, views untuk Instagram, TikTok, Facebook, Telegram, dan YouTube dengan proses aman.</p></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="cta">
+            <div class="container">
+                <div class="glass-card cta-box fade-up">
+                    <h2>Siap Bergabung Bersama <br><span style="background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">KING & QUEEN BOT?</span></h2>
+                    <p>Nikmati layanan WhatsApp Bot Premium, sistem otomatis, serta berbagai layanan digital terbaik dalam satu platform yang andal.</p>
+                    <a href="https://wa.me/6289510006505" target="_blank" class="btn btn-primary"><i class="fab fa-whatsapp"></i> CHAT SEKARANG</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container footer-container">
+                <div class="footer-copy">&copy; 2026 <strong>KING & QUEEN OFFICIAL <span class="verified-badge" aria-label="Verified">✔</span></strong></div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- PRICING PAGE VIEW -->
+    <div id="pricing-page-view">
+        <div class="container" style="position: relative;">
+            <div class="pricing-page-header">
+                <button class="btn btn-secondary btn-back-home" id="btn-back-to-home"><i class="fas fa-arrow-left"></i> Kembali ke Home</button>
+                <div style="font-size: 1.1rem; color: var(--neon-blue); font-weight: 600; margin-bottom: 8px; letter-spacing: 1px;">⚡ PREMIUM DIGITAL ECOSYSTEM 2026</div>
+                <h2 style="font-size: 2.2rem; font-weight: 800; margin-bottom: 15px; text-transform: uppercase;">LIST HARGA <span>SEWA K&Q</span></h2>
+                <p style="color: var(--text-muted); font-size: 0.9rem; max-width: 750px; margin: 0 auto; line-height: 1.6;">
+                    🚀 Sistem Cloud Automasi 24 Jam Nonstop &nbsp;&bull;&nbsp; 🛡️ Proteksi Penuh & Anti Denda Ilegal<br>
+                    💳 Integrasi Smart Balance Otomatis &nbsp;&bull;&nbsp; 🔄 Saldo Fleksibel Dapat Ditukar Sewa / Akses Premium
+                </p>
+            </div>
+
+            <!-- Kontainer Utama Tombol Grid -->
+            <div class="split-pricing-container">
+                
+                <!-- BARIS 1 (KIRI): REGULER -->
+                <div class="tier-wrapper-box">
+                    <div class="select-tier-box reguler-trigger" id="trigger-reguler">
+                        <i class="fas fa-users tier-icon"></i>
+                        <h3>Reguler</h3>
+                    </div>
+
+                    <div class="tier-price-dropdown" id="dropdown-reguler">
+                        <div class="price-list-wrapper">
+                            <div class="price-table-list">
+                                <div class="price-row-item">
+                                    <div class="row-top-meta">
+                                        <span class="row-duration">1 Bulan <span class="badge-tag badge-hemat">Paket Hemat</span></span>
+                                        <span class="row-cost">Rp15K</span>
+                                    </div>
+                                    <span class="row-bonus">Premium 3 Akun</span>
+                                </div>
+                                <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">2 Bulan</span><span class="row-cost">Rp23K</span></div><span class="row-bonus">Premium 4 Akun</span></div>
+                                <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">3 Bulan</span><span class="row-cost">Rp28K</span></div><span class="row-bonus">Premium 4 Akun</span></div>
+                                <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">4 Bulan</span><span class="row-cost">Rp35K</span></div><span class="row-bonus">Premium All Admin</span></div>
+                                <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">5 Bulan</span><span class="row-cost">Rp45K</span></div><span class="row-bonus">Premium All Admin</span></div>
+                                <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">6 Bulan</span><span class="row-cost">Rp55K</span></div><span class="row-bonus">Premium All Admin</span></div>
+                                <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">7 Bulan</span><span class="row-cost">Rp65K</span></div><span class="row-bonus">Premium All Admin</span></div>
+                                <div class="price-row-item">
+                                    <div class="row-top-meta">
+                                        <span class="row-duration">8 Bulan <span class="badge-tag badge-sultan">Paket Sultan</span></span>
+                                        <span class="row-cost">Rp75K</span>
+                                    </div>
+                                    <span class="row-bonus">Premium All Admin</span>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/6289510006505?text=Halo%20kak%20aku%20mau%20sewa%20yang%20reguler" target="_blank" class="btn btn-primary">Sewa Reguler</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BARIS 1 (KANAN): VIP -->
+                <div class="tier-wrapper-box">
+                    <div class="select-tier-box vip-trigger" id="trigger-vip">
+                        <i class="fas fa-crown tier-icon"></i>
+                        <h3>Sewa VIP</h3>
+                    </div>
+
+                    <div class="tier-price-dropdown" id="dropdown-vip">
+                        <div class="price-list-wrapper">
+                            <div class="price-table-list">
+                                <div class="price-row-item">
+                                    <div class="row-top-meta">
+                                        <span class="row-duration">1 Bulan <span class="badge-tag badge-hemat">Paket Hemat</span></span>
+                                        <span class="row-cost">Rp25K</span>
+                                    </div>
+                                    <span class="row-bonus">Redeem 2Jt</span>
+                                </div>
+                                <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">2 Bulan</span><span class="row-cost">Rp40K</span></div><span class="row-bonus">Redeem 5Jt</span></div>
+                                <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">3 Bulan</span><span class="row-cost">Rp55K</span></div><span class="row-bonus">Redeem 10Jt</span></div>
+                                <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">4 Bulan</span><span class="row-cost">Rp70K</span></div><span class="row-bonus">Redeem 12Jt</span></div>
+                                <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">5 Bulan</span><span class="row-cost">Rp85K</span></div><span class="row-bonus">1 Perm + 12Jt</span></div>
+                                <div class="price-row-item">
+                                    <div class="row-top-meta">
+                                        <span class="row-duration">6 Bulan <span class="badge-tag badge-sultan">Paket Sultan</span></span>
+                                        <span class="row-cost">Rp99K</span>
+                                    </div>
+                                    <span class="row-bonus">2 Perm + 20Jt</span>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/6289510006505?text=Halo%20kak%20aku%20mau%20sewa%20yang%20vip" target="_blank" class="btn btn-primary" style="background: linear-gradient(45deg, var(--neon-purple), #ff007f); box-shadow: 0 0 15px rgba(173,0,255,0.4);">Sewa VIP</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BARIS 2 (KIRI): FOLLOWERS INSTAGRAM -->
+                <div class="tier-wrapper-box">
+                    <div class="select-tier-box ig-trigger" id="trigger-ig" style="border-color: rgba(225, 48, 108, 0.3);">
+                        <i class="fab fa-instagram tier-icon" style="color: #e1306c;"></i>
+                        <h3>Followers IG</h3>
+                    </div>
+
+                    <div class="tier-price-dropdown" id="dropdown-ig">
+                        <div class="price-list-wrapper" style="border-color: #e1306c; box-shadow: 0 0 25px rgba(225, 48, 108, 0.2);">
+                            <div class="price-table-list">
+                                <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">100 Followers</span><span class="row-cost" style="background: rgba(225, 48, 108, 0.15); color: #ff6097;">Rp3.000</span></div></div>
+                                <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">200 Followers</span><span class="row-cost" style="background: rgba(225, 48, 108, 0.15); color: #ff6097;">Rp6.000</span></div></div>
+                                <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">300 Followers</span><span class="row-cost" style="background: rgba(225, 48, 108, 0.15); color: #ff6097;">Rp9.000</span></div></div>
+                                <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">400 Followers</span><span class="row-cost" style="background: rgba(225, 48, 108, 0.15); color: #ff6097;">Rp12.000</span></div></div>
+                                <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">500 Followers</span><span class="row-cost" style="background: rgba(225, 48, 108, 0.15); color: #ff6097;">Rp15.000</span></div></div>
+                                <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">600 Followers</span><span class="row-cost" style="background: rgba(225, 48, 108, 0.15); color: #ff6097;">Rp18.000</span></div></div>
+                                <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">700 Followers</span><span class="row-cost" style="background: rgba(225, 48, 108, 0.15); color: #ff6097;">Rp21.000</span></div></div>
+                                <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">800 Followers</span><span class="row-cost" style="background: rgba(225, 48, 108, 0.15); color: #ff6097;">Rp24.000</span></div></div>
+                                <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">900 Followers</span><span class="row-cost" style="background: rgba(225, 48, 108, 0.15); color: #ff6097;">Rp27.000</span></div></div>
+                                <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">1.000 Followers</span><span class="row-cost" style="background: rgba(225, 48, 108, 0.15); color: #ff6097;">Rp30.000</span></div></div>
+                            </div>
+                            <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 15px; text-align: left; line-height: 1.4; background: rgba(255,255,255,0.03); padding: 10px; border-radius: 8px;">
+                                <strong>Catatan Penting 🗒️:</strong><br>
+                                • No garansi (tanpa jaminan)<br>
+                                • Followers berkurang bukan tanggung jawab admin<br>
+                                • Tidak menerima komplain setelah order selesai<br>
+                                • Jangan spam username sebelum/selama proses<br>
+                                • Order = setuju dengan semua ketentuan
+                            </div>
+                            <a href="https://wa.me/6289510006505?text=Halo%20kak%20aku%20mau%20order%20Followers%20Instagram" target="_blank" class="btn btn-primary" style="background: linear-gradient(45deg, #f09433, #e1306c, #dc2743);">Beli Followers IG</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BARIS 2 (KANAN): SUNTIK WA -->
+                <div class="tier-wrapper-box">
+                    <div class="select-tier-box wa-trigger" id="trigger-wa" style="border-color: rgba(37, 211, 102, 0.3);">
+                        <i class="fab fa-whatsapp tier-icon" style="color: #25D366;"></i>
+                        <h3>Suntik WA</h3>
+                    </div>
+
+                    <div class="tier-price-dropdown" id="dropdown-wa">
+                        <div class="price-list-wrapper" style="border-color: #25D366; box-shadow: 0 0 25px rgba(37, 211, 102, 0.2);">
+                            
+                            <h4 style="font-size: 0.9rem; color: #25D366; margin-bottom: 10px; text-align: left;">📈 Followers Channel WhatsApp</h4>
+                            <div class="price-table-list" style="margin-bottom: 15px;">
+                                <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">10 followers</span><span class="row-cost" style="background: rgba(37, 211, 102, 0.15); color: #25D366;">Rp500</span></div></div>
+                                <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">20 followers</span><span class="row-cost" style="background: rgba(37, 211, 102, 0.15); color: #25D366;">Rp1.000</span></div></div>
+                                <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">30 followers</span><span class="row-cost" style="background: rgba(37, 211, 102, 0.15); color: #25D366;">Rp1.500</span></div></div>
+                                <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">50 followers</span><span class="row-cost" style="background: rgba(37, 211, 102, 0.15); color: #25D366;">Rp2.500</span></div></div>
+                                <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">70 followers</span><span class="row-cost" style="background: rgba(37, 211, 102, 0.15); color: #25D366;">Rp3.500</span></div></div>
+                                <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">85 followers</span><span class="row-cost" style="background: rgba(37, 211, 102, 0.15); color: #25D366;">Rp4.250</span></div></div>
+                                <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">100 followers</span><span class="row-cost" style="background: rgba(37, 211, 102, 0.15); color: #25D366;">Rp5.000</span></div></div>
+                                <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">200 followers</span><span class="row-cost" style="background: rgba(37, 211, 102, 0.15); color: #25D366;">Rp10.000</span></div></div>
+                                <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">400 followers</span><span class="row-cost" style="background: rgba(37, 211, 102, 0.15); color: #25D366;">Rp20.000</span></div></div>
+                                <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">600 followers</span><span class="row-cost" style="background: rgba(37, 211, 102, 0.15); color: #25D366;">Rp30.000</span></div></div>
+                                <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">1.000 followers</span><span class="row-cost" style="background: rgba(37, 211, 102, 0.15); color: #25D366;">Rp50.000</span></div></div>
+                            </div>
+
+                            <h4 style="font-size: 0.9rem; color: #ffcc00; margin-bottom: 10px; text-align: left;">❤️ Reaction Channel WhatsApp (😮❤️😂🙏🏻👍🏻)</h4>
+                            <div class="price-table-list">
+                                <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">20 reaction</span><span class="row-cost" style="background: rgba(255, 204, 0, 0.15); color: #ffcc00;">Rp500</span></div></div>
+                                <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">40 reaction</span><span class="row-cost" style="background: rgba(255, 204, 0, 0.15); color: #ffcc00;">Rp1.000</span></div></div>
+                                <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">60 reaction</span><span class="row-cost" style="background: rgba(255, 204, 0, 0.15); color: #ffcc00;">Rp1.500</span></div></div>
+                                <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">80 reaction</span><span class="row-cost" style="background: rgba(255, 204, 0, 0.15); color: #ffcc00;">Rp2.000</span></div></div>
+                                <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">100 reaction</span><span class="row-cost" style="background: rgba(255, 204, 0, 0.15); color: #ffcc00;">Rp2.500</span></div></div>
+                                <div class="price-row-item"><div class="row-top-meta"><span class="row-duration">150 reaction</span><span class="row-cost" style="background: rgba(255, 204, 0, 0.15); color: #ffcc00;">Rp3.500</span></div></div>
+                            </div>
+                            <a href="https://wa.me/6289510006505?text=Halo%20kak%20aku%20mau%20order%20Suntik%20WhatsApp" target="_blank" class="btn btn-primary" style="background: #25D366; color: #fff; margin-top: 15px;">Beli Layanan WA</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll To Top Button -->
+    <button id="scrollTop" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- Floating Action Buttons -->
+    <div class="floating-container">
+        <a href="https://whatsapp.com/channel/0029VaZ43rDLI8YeAAtq5M2T" target="_blank" class="floating-btn floating-btn-channel" data-label="Saluran WhatsApp"><i class="fas fa-bullhorn"></i></a>
+        <a href="https://wa.me/6289510006505" target="_blank" class="floating-btn floating-btn-owner" data-label="Chat Owner"><i class="fab fa-whatsapp"></i></a>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+
+<script>
+    // Theme + Music Controls
+    const root = document.documentElement;
+    const themeToggle = document.getElementById('themeToggle');
+    const musicToggle = document.getElementById('musicToggle');
+    const siteMusic = document.getElementById('siteMusic');
+
+    function setTheme(theme) {
+        root.setAttribute('data-theme', theme);
+        localStorage.setItem('kq-theme', theme);
+        if (themeToggle) {
+            themeToggle.innerHTML = theme === 'light'
+                ? '<i class="fas fa-moon"></i>'
+                : '<i class="fas fa-sun"></i>';
+            themeToggle.title = theme === 'light' ? 'Mode gelap' : 'Mode terang';
+            themeToggle.setAttribute('aria-label', theme === 'light' ? 'Aktifkan mode gelap' : 'Aktifkan mode terang');
+        }
+    }
+
+    setTheme(localStorage.getItem('kq-theme') || 'dark');
+
+    themeToggle?.addEventListener('click', () => {
+        setTheme(root.getAttribute('data-theme') === 'light' ? 'dark' : 'light');
+    });
+
+    function updateMusicButton(isPlaying) {
+        if (!musicToggle) return;
+        musicToggle.innerHTML = isPlaying
+            ? '<i class="fas fa-volume-high"></i>'
+            : '<i class="fas fa-volume-xmark"></i>';
+        musicToggle.title = isPlaying ? 'Matikan musik' : 'Nyalakan musik';
+        musicToggle.setAttribute('aria-label', isPlaying ? 'Matikan musik' : 'Nyalakan musik');
+        musicToggle.classList.toggle('is-playing', isPlaying);
+    }
+
+    async function startMusic() {
+        if (!siteMusic) return;
+        try {
+            await siteMusic.play();
+            updateMusicButton(true);
+        } catch (e) {
+            // Browser dapat memblokir autoplay bersuara. Coba lagi saat interaksi pertama.
+            updateMusicButton(false);
+        }
+    }
+
+    musicToggle?.addEventListener('click', async () => {
+        if (!siteMusic) return;
+        if (siteMusic.paused) {
+            await startMusic();
+        } else {
+            siteMusic.pause();
+            updateMusicButton(false);
+        }
+    });
+
+    // Default musik ON. Jika autoplay diblokir browser, mulai otomatis pada interaksi pertama.
+    window.addEventListener('load', startMusic, { once: true });
+    ['pointerdown', 'touchstart', 'keydown'].forEach(eventName => {
+        document.addEventListener(eventName, () => {
+            if (siteMusic?.paused) startMusic();
+        }, { once: true, passive: true });
+    });
+</script>
+
+</body>
+</html>
